@@ -1,23 +1,25 @@
 //客户维护-客户资料查询
 function khzlcx(){
-    $("#khgl").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>客户管理-客户资料查询<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+  
-                    "<div class='content' style='margin-top:100px;'>" +
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='editUser()'/>客户管理-客户资料查询</div>"+  
+                    "<div class='content' style='height:280px;padding-top:80px;background:url(images/book.jpg) no-repeat center center;'>" +
                         "<p>客户姓名:<input type='text'/></p>"+
                         "<p>证件类型:<select><option>身份证</option></select></p>"+
                         "<p>证件号码:<input type='text'/></p>"+
-                        "<p>" +
-                            "<input type='button' class='btn btn-large btn-primary' value='查询' onclick='khcx()'/>"+                       
-                            "<input type='button' class='btn btn-large btn-primary' value='返回' onclick='editUser()'/>" +
-                        "</p>" +
+                        "<p><input type='button' class='btn btn-large btn-primary' value='查询' onclick='khcx()'/></p>" +
                     "</div>");
     $(".right").hide();
-    $("#khgl").show();
+    $("#mainPage").show();
 }
 //客户维护-客户资料查询-查询
 function khcx(){
-    $("#khgl").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>郝俊芝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 320404165620223102<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+  
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khzlcx()'/>客户管理-客户资料查询</div>"+  
                     "<div class='content'>" +
                         "<table class='cpTable'>"+
+                            "<tr>"+                             
+                                "<th colspan='2'>客户1 &nbsp;&nbsp;&nbsp;&nbsp;32045056659885166</td>"+  
+                            "</tr>"+
                             "<tr>"+                             
                                 "<td style='width:25%;'>贷款进度</td>"+          
                                 "<td>审核中</td>"+
@@ -27,20 +29,18 @@ function khcx(){
                                 "<td>已放款</td>"+
                             "</tr>"+
                         "</table>"+
-                        "<p>" +
-                            "<input type='button' class='btn btn-large btn-primary' value='客户资料查询' onclick=''/>"+                       
-                            "<input type='button' class='btn btn-large btn-primary' value='返回' onclick='khzlcx()'/>" +
-                        "</p>" +
+                        "<p><input type='button' class='btn btn-large btn-primary' value='客户资料查询' onclick=''/></p>" +
                     "</div>");
     $(".right").hide();
-    $("#khgl").show();
+    $("#mainPage").show();
 }
 
 //客户维护-客户维护计划
 function khwhjh(){
-    $("#khgl").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>客户维护计划<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+  
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='editUser()'/>客户维护计划</div>"+  
                     "<div class='content'>"+
-                        "<table class='cpTable'>"+
+                        "<table class='cpTable' style='text-align:center;'>"+
                             "<tr>"+                             
                                 "<th>序号</th>"+  
                                 "<th>客户姓名</th>"+
@@ -49,9 +49,9 @@ function khwhjh(){
                                 "<th>贷款金额</th>"+
                                 "<th>还款状态</th>"+
                                 "<th>贷款余额</th>"+
-                                "<th>维护方式</th>"+
-                                "<th>维护目标</th>"+
-                                "<th>维护时间</th>"+
+                                "<th style='width:15%;'>维护方式</th>"+
+                                "<th style='width:15%;'>维护目标</th>"+
+                                "<th style='width:15%;'>维护时间</th>"+
                             "</tr>"+
                             "<tr>"+    
                                 "<td>1</td>"+
@@ -69,13 +69,14 @@ function khwhjh(){
                         "<p><input type='button' class='btn btn-large btn-primary' value='保存并继续' onclick='editUser()'/></p>"+
                     "</div>");
     $(".right").hide();
-    $("#khgl").show();
+    $("#mainPage").show();
   }   
 //客户维护-客户维护日志
 function khwhrz(){
-    $("#khgl").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>客户维护日志<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+  
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='editUser()'/>客户维护日志</div>"+  
                     "<div class='content'>"+
-                        "<table class='cpTable'>"+
+                        "<table class='cpTable' style='text-align:center;'>"+
                             "<tr>"+                             
                                 "<th>序号</th>"+  
                                 "<th>客户姓名</th>"+
@@ -95,17 +96,18 @@ function khwhrz(){
                                 "<td><input type='button' onclick='khwhjh()' class='btn btn-warning' value='是'/></td>"+
                             "</tr>"+
                         "</table>"+
-                        "<textarea placeholder='客户维护实施描述' style='width:98%;height:15em;margin:0;border-width:1px 0;border-radius:none;'></textarea>"+
+                        "<textarea placeholder='客户维护实施描述' style='height:15em;'></textarea>"+
                         "<p><input type='button' class='btn btn-large btn-primary' value='保存并继续' onclick='editUser()'/></p>"+
                     "</div>");
     $(".right").hide();
-    $("#khgl").show();
+    $("#mainPage").show();
   }   
 //客户维护-客户催收日志
 function khcsrz(){
-    $("#khgl").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>李丽&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 00001<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+  
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='editUser()'/>客户维护-客户催收日志</div>"+  
                     "<div class='content'>"+
-                        "<table class='cpTable'>"+
+                        "<table class='cpTable' style='text-align:center;'>"+
                             "<tr>"+                             
                                 "<th>序号</th>"+  
                                 "<th>客户姓名</th>"+
@@ -129,17 +131,18 @@ function khcsrz(){
                                 "<td><input type='button' onclick='bgcsjh()' class='btn btn-warning' value='是'/></td>"+
                             "</tr>"+
                         "</table>"+
-                        "<textarea placeholder='客户催收实施描述' style='width:98%;height:15em;margin:0;border-width:1px 0;border-radius:none;'></textarea>"+
-                        "<p><input type='button' class='btn btn-large btn-primary' value='返回' onclick='editUser()'/></p>"+
+                        "<textarea placeholder='客户催收实施描述' style='height:15em;'></textarea>"+
+                        "<p><input type='button' class='btn btn-large btn-primary' value='保存并继续' onclick='editUser()'/></p>"+
                     "</div>");
     $(".right").hide();
-    $("#khgl").show();
+    $("#mainPage").show();
   }   
 //变更催收计划
 function bgcsjh(){
-    $("#khgl").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>李丽&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 00001<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+ 
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='editUser()'/>杨景琳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 01010419</div>"+ 
                     "<div class='content'>"+
-                        "<table class='cpTable'>"+
+                        "<table class='cpTable' style='text-align:center;'>"+
                             "<tr>"+                             
                                 "<th>序号</th>"+  
                                 "<th>客户姓名</th>"+
@@ -168,5 +171,5 @@ function bgcsjh(){
                         "<p><input type='button' class='btn btn-large btn-primary' value='保存并继续' onclick='editUser()'/></p>"+
                     "</div>");
     $(".right").hide();
-    $("#khgl").show();
+    $("#mainPage").show();
   }   

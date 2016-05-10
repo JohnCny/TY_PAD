@@ -1,18 +1,20 @@
 //我的计划
 function mywdjh(){
-    $("#wdjh").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>我的计划<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+  
-                    "<div class='content' style='position:absolute;right:0;left:0;height:700px;;background:#fff url(images/logo.jpg) no-repeat;background-position:bottom right;'>" +
-                        "<div class='box box5' onclick='mykhwhjh()'><img src='images/khwhjh.png'/><span>客户维护计划</span></div>"+
-                        "<div class='box box9' onclick='khcsjh()'><img src='images/khcsjh.png'/><span>客户催收计划</span></div><div class='line'></div>"+
-                        "<div class='box box6' onclick='pxjh()'><img src='images/pxjh.png'/><span>培训计划</span></div>"+
-                        "<div class='box box7' onclick='gzjh()'><img src='images/gzjh.png'/><span>工作计划</span></div>"+
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'>计划管理</div>"+  
+                    "<div class='content'>" +
+                        "<div class='box jhgl' onclick='mykhwhjh()'><img src='images/khwhjh.png' style='margin-left:-15px;'/><span>客户维护计划</span></div>"+
+                        "<div class='box jhgl' onclick='khcsjh()'><img src='images/khcsjh.png' style='margin-left:-15px;'/><span>客户催收计划</span></div>"+
+                        "<div class='box jhgl' onclick='pxjh()'><img src='images/pxjh.png' style='margin-left:-15px;'/><span>培训计划</span></div>"+
+                        "<div class='box jhgl' onclick='gzjh()'><img src='images/gzjh.png' style='margin-left:-15px;'/><span>工作计划</span></div>"+                       
                     "</div>");
     $(".right").hide();
-    $("#wdjh").show();
+    $("#mainPage").show();
 }
 //客户维护计划
 function mykhwhjh(){
-    $("#wdjh").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>李丽&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 00001<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+ 
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mywdjh()'/>客户维护计划</div>"+ 
                     "<div class='content'>"+
                         "<table class='cpTable' style='text-align:center;'>"+
                             "<tr>"+                             
@@ -88,14 +90,15 @@ function mykhwhjh(){
                                 "<td><input type='date' class='addinput'/></td>"+
                             "</tr>"+
                         "</table>"+
-                        "<p><input type='button' class='btn btn-large btn-primary' value='保存并继续' onclick='mywdjh()'/></p>"+
+                        "<p><input type='button' class='btn btn-large btn-primary' value='保存' onclick='mywdjh()'/></p>"+
                     "</div>");
     $(".right").hide();
-    $("#wdjh").show();
+    $("#mainPage").show();
   }   
 //客户催收计划
 function khcsjh(){
-    $("#wdjh").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>李丽&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 00001<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+ 
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mywdjh()'/>客户催收计划</div>"+ 
                     "<div class='content'>"+
                         "<table class='cpTable' style='text-align:center;'>"+
                             "<tr>"+                             
@@ -123,14 +126,15 @@ function khcsjh(){
                                 "<td><input type='date' class='addinput'/></td>"+
                             "</tr>"+
                         "</table>"+
-                        "<p><input type='button' class='btn btn-large btn-primary' value='保存并继续' onclick='mywdjh()'/></p>"+
+                        "<p><input type='button' class='btn btn-large btn-primary' value='保存' onclick='mywdjh()'/></p>"+
                     "</div>");
     $(".right").hide();
-    $("#wdjh").show();
+    $("#mainPage").show();
   }   
 //培训计划
 function pxjh(){
-    $("#wdjh").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>李丽&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 00001<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+ 
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mywdjh()'/>培训计划</div>"+ 
                     "<div class='content'>"+
                         "<table class='cpTable' style='text-align:center;'>"+
                             "<tr>"+                             
@@ -152,18 +156,18 @@ function pxjh(){
                                 "<td><input type='button' class='btn btn-large btn-info' value='确认'/></td>"+
                             "</tr>"+
                         "</table>"+
-                        "<p><input type='button' class='btn btn-large btn-primary' value='返回' onclick='mywdjh()'/></p>"+
                     "</div>");
     $(".right").hide();
-    $("#wdjh").show();
+    $("#mainPage").show();
   }   
   //工作计划
 function gzjh(){
-    $("#wdjh").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>李丽&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 00001<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+ 
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mywdjh()'/>工作计划</div>"+ 
                     "<div class='content'>"+
                         "<table id='gzjh' class='cpTable' style='text-align:center;'>"+
                             "<tr>"+                             
-                                "<th>序号</th>"+  
+                                "<th style='width:100px;'>序号</th>"+  
                                 "<th>工作事项描述</th>"+
                                 "<th>地点</th>"+
                                 "<th>时间</th>"+
@@ -180,11 +184,11 @@ function gzjh(){
                             "</tr>"+
                         "</table>"+
                         "<p class='Left'>" +
-                            "<button class='btn btn-info btn-small' onclick='addTd(\"gzjh\")'><img src='images/add.png'/></button>" +
-                            "<button class='btn btn-info btn-small' onclick='removeTd(\"gzjh\")'><img src='images/del.png'/></button>" +
+                            "<button class='add-button' onclick='addTd(\"gzjh\")'><img src='images/add.png'/></button>" +
+                            "<button class='add-button' onclick='removeTd(\"gzjh\")'><img src='images/del.png'/></button>" +
                         "</p>"+
-                        "<p><input type='button' class='btn btn-large btn-primary' value='保存并继续' onclick='mywdjh()'/></p>"+
+                        "<p><input type='button' class='btn btn-large btn-primary' value='保存' onclick='mywdjh()'/></p>"+
                     "</div>");
     $(".right").hide();
-    $("#wdjh").show();
+    $("#mainPage").show();
   }   
