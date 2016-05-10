@@ -28,56 +28,41 @@
              </form>
          </div>
 	</div>
-	<div id="page1" class="left" style="display:none;">
+	<div class='top'><img src='images/top2.jpg'/><img class='Right' src='images/dc.png' onclick="show_dcts()" style='z-index:21'/></div>
+	<div class='bottom'><img src='images/bj.jpg'/></div> 	
+	<div id="page1" class="left" style="display:none;">		
+		<div onclick='showNav()' class="hidebt"><img src='images/show_list.png'/></div>		
 		<ul class="nav">
-			<li onclick="changeNav(this);user()"><img src="images/user/01.png" class="user"/></li>
-			<li id="index" onclick="changeNav(this);mywdsy()"><img src="images/wdsy.png"/><span>我的首页</span></li>
-			<!-- <li id="product" onclick="changeNav(this);mycpgl()"><img src="images/cpgl.png"/><span>产品查询</span></li> -->
-			<li id="customer" onclick="changeNav(this);mykhgl()"><img src="images/khgl.png"/><span>客户管理</span></li>
-			<li id="customer" onclick="changeNav(this);myjjgl()"><img src="images/jjgl.png"/><span>进件管理</span></li>
-			<li onclick="changeNav(this);mywdjh()"><img src="images/wdjh.png"/><span>我的计划</span></li>
+			<li style="padding-bottom:0;"><img src="images/user/01.png" class="user"/><p>上次登录时间：<br/>2016.04.04  12:00:00</p></li>
+			<li class="li" id="index" onclick="changeNav(this,1);mywdsy()"><img src="images/1.png"/><span>我的首页</span></li>
+			<li class="li" id="customer" onclick="changeNav(this,2);mykhgl()"><img src="images/2.png"/><span>客户管理</span></li>
+			<li class="li" id="customer" onclick="changeNav(this,3);myjjgl()"><img src="images/3.png"/><span>进件管理</span></li>
+			<li class="li" onclick="changeNav(this,4);mywdjh()"><img src="images/4.png"/><span>计划管理</span></li>
+			<li class="li" onclick="changeNav(this,5);myshsp()"><img src="images/5.png"/><span>审核审批</span></li>
 		</ul>
 	</div>
-	<div id="wdsy" class="right" style="display:none;">
-		<!--<div class='title'><img src='images/show.png' onclick='showNav()'/>我的首页<img class='Right' src='images/dc.png' onclick='dc()'/></div> 
-        <div class='content' style='margin-bottom:0;'>
-        	<table class='ListTb'>
-        		<tr>
-        			<td><img src='images/khjjxx.png'/><span>客户进件信息</span></td>
-        			<td><img src='images/khyyzk.png'/><span>客户运营状况</span></td>        			
-        			<td><img src='images/wdzj.png'/><span>我的足迹</span></td>
-        		</tr>
-        		<tr>
-        			<td><img src='images/tz1.png'/><span>通知</span></td>
-        			<td><img src='images/jljlxx.png'/><span>奖励激励信息</span></td>        			
-        			<td><img src='images/qdgx.png'/></td>
-        		</tr>
-        	</table>
-
-           
-         </div>  -->
+	<div id="mainPage" class="right" style="display:none;">
+		<!-- 我的首页 wdsy.js / 产品查询cpgl.js-->
+		<!-- 客户管理 khgl.js / khwh.js-->
+		<!-- 进件管理 jjgl.js -->
+			<!-- 客户基本信息khjbxx.js -->
+			<!-- 客户经营信息khjyxx.js -->
+			<!-- 客户财务信息khcwxx.js 、khcwxx_syb.js 、khcwxx_zcfzb.js -->
+			<!-- 客户影像资料khyxzl.js -->
+		<!-- 计划管理 wdjh.js -->
+		<!-- 审核审批 shsp.js -->
 	</div>
-	<div id="yhxx" class="right" style="display:none;">
-		<!-- 用户信息 -->
+	<div id="jjsp" class="right" style="display:none;">
 	</div>
-	<div id="cpgl" class="right" style="display:none;">
-		<!-- 产品管理 -->
-	</div>
-	<!-- <div id="cpxx" class="right" style="display:none;">
-		产品信息
-	</div> -->
-	<div id="khgl" class="right" style="display:none;">
-		<!-- 客户管理 -->
-	</div>	
-	<div id="jjgl" class="right" style="display:none;">
-		<!-- 进件管理 -->
-	</div>
-	
-	<div id="wdjh" class="right" style="display:none;">
-		<!-- 我的计划 -->
-	</div>
+	<div id="text">	
+		
+	</div><!-- /text -->
 </body>
 <script src="js/jquery-1.7.2.min.js"></script>
+<!-- 饼图 -->
+<script src="js/zingchart.min.js"></script>
+<script src="js/zingchart.jquery.js"></script>
+
 <script src="js/index.js"></script>
 <script src="js/factory.js"></script>
 <script src="js/login.js"></script>
@@ -91,8 +76,13 @@
 <script src="js/khcwxx_syb.js"></script>
 <script src="js/khwh.js"></script>
 <script src="js/jjgl.js"></script>
+<script src="js/khyxzl.js"></script>
 <script src="js/wdsy.js"></script>
 <script src="js/wdjh.js"></script>
+<script src="js/shsp.js"></script>
+<script src="js/syb.js"></script>
+<script src="js/zcfzb.js"></script>
+<script src="js/xjlb.js"></script>
 
 
 
@@ -102,6 +92,7 @@
 <script type="text/javascript" src="js/ImagePlugin.js"></script>
 <script type="text/javascript" src="js/DBPlugin.js"></script>
 <script type="text/javascript">
+	
 	
 
   	//phonegap调用相机部分
@@ -177,7 +168,6 @@
 	    else if(type == "voice"){
 	    	navigator.device.capture.captureAudio(captureSuccess, captureError, {limit: 1}); 
 	    }
-	    
 	    // 采集操作成功完成后的回调函数
 		function captureSuccess(mediaFiles) { 
 		    var i, len; 

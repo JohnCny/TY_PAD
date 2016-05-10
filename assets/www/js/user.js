@@ -1,17 +1,17 @@
 //我的首页
 function user(){
-    $("#yhxx").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>李丽&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 00001<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+  
+    $("#yhxx").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>杨景琳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 01010419</div>"+  
                     "<div class='content' style='padding:2em 10em;'>"+
                         "<table class='cpTable'>"+
-                           "<tr>"+                             
-                               "<th colspan='3'>客户经理信息</th>"+
-                           "</tr>"+
+							"<tr>"+                             
+								"<th colspan='3'>客户经理信息</th>"+
+							"</tr>"+
                             "<tr>"+   
                                 "<td rowspan='7' style='width:290px;'>" +
-                                    "<img src='images/user/01.png'/>" +
+                                    "<img src='images/user/01.jpg'/>" +
                                 "</td>"+
                                 "<td style='width:25%;'>姓名</td>"+          
-                                "<td>李丽</td>"+
+                                "<td>杨景琳</td>"+
                             "</tr>"+
                             "<tr>"+                             
                                 "<td>性别</td>"+  
@@ -27,7 +27,7 @@ function user(){
                             "</tr>"+
                             "<tr>"+                             
                                 "<td>客户经理编号</td>"+  
-                                "<td>00001</td>"+
+                                "<td>01010419</td>"+
                             "</tr>"+
                             "<tr>"+                             
                                 "<td>职位</td>"+  

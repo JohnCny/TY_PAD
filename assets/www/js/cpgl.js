@@ -1,82 +1,45 @@
-/*//产品查询
-function mycpgl(){
-	//工厂模式
-    var data = JSON.stringify({
-        "userId": window.sessionStorage.getItem("userId")
-    });
-    var post = crud.dom.factory("POST");
-    post.doPost(wsProductList,data,ProductListCallback,"连接失败！");
-    
-}
-//回调
-function ProductListCallback(json){
-	var obj = $.evalJSON(json);
-    var result = obj.result;
-    var str = "";
-    str+="<div class='title'><img src='images/show.png' onclick='showNav()'/>产品查询<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+  
-	    "<div class='content'>"+
-	    "<ul class='list'>"
-    for(var i=0;i<result.length;i++){
-    	str+="<li onclick='mycpxx("+result[i].id+","+result+")'><img src='images/cp/1.jpg'/><span>"+result[i].productName+"<br/>"+
-    	"<font>产品期限：<font class='blue'>"+result[i].prodLimitTime+"</font></font>" +
-        "<font>产品利率：<font class='red'>"+result[i].rateRange+"</font></font>" +
-    	"</span></li>";
-    }
-    str+= "</ul>"+
-		    "</div>"+
-		    "<div class='buttons'><input type='text' placeholder='搜索'/></div>";
-    $("#cpgl").html(str);
-	$(".right").hide();
-	$("#cpgl").show();
-}
 
-
-//产品信息
-function mycpxx(id,result){
-	var str="";
-	for(var i=0;i<result.length;i++){
-		if(id==result[i].id){
-			str="<div class='title'><img src='images/show.png' onclick='showNav()'/>"+result[i].productName+"<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+  
-	            "<div class='content'>"+
-	            "<table class='cpTable'>"+
-	                "<tr>"+                             
-	                    "<td style='width:25%;'>产品类别</td>"+         
-	                    "<td>"+result[i].productTypeCode+"</td>"+
-	                "</tr>"+
-	                "<tr>"+                             
-	                    "<td>产品描述</td>"+            
-	                    "<td>XXXXXXXXX</td>"+
-	                "</tr>"+
-	                "<tr>"+                             
-	                    "<td>产品授信区间</td>"+          
-	                    "<td>"+result[i].prodCreditRange+"</td>"+
-	                "</tr>"+
-	                "<tr>"+                             
-	                    "<td>产品期限</td>"+            
-	                    "<td>"+result[i].prodLimitTime+"</td>"+
-	                "</tr>"+
-	                "<tr>"+                             
-	                    "<td>产品利率</td>"+            
-	                    "<td>"+result[i].rateRange+"</td>"+
-	                "</tr>"+
-	            "</table>"+
-	        "</div>"+
-	        "<div class='buttons'>" +
-	            "<input type='button' class='btn btn-info' value='申请'/>"+                       
-	            "<input type='button' class='btn' value='返回' onclick='mycpgl()'/>" +
-	        "</div>"
-		}
-	}
-    $("#cpgl").html(str);
-    $(".right").hide();
-    $("#cpgl").show();
-}*/
 //产品管理
 function mycpgl(){
-    window.scrollTo(0,0);//滚动条回到顶端
-    $("#cpgl").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>产品查询<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+  
-                    "<div class='content' style='padding-bottom:30px;'>"+
-                        "<ul class='list'>"+
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'>" +
+    		            "<img src='images/back.png' onclick='mywdsy()'/>产品查询" +
+    		            "<input type='text' style='margin:13px 40px;' placeholder='搜索' onkeyup='search(this)'/>" +
+    		        "</div>"+  
+                    "<div class='content' style='padding-bottom:60px;margin-top:160px;'>"+
+                        "<div class='cplb' onclick='mycpxx1()'>" +
+                            "<img src='images/cp/jqt.png' title='集群通'/>" +
+                            "<span class='dklx'>经营性贷款</span>"+
+                            "<span class='cpqx'>产品期限：2018-01-01</span>"+
+                            "<span class='cpll'>产品利率：1.35%</span>"+
+                            //"<img src='images/new.png' class='new'/>" +
+                        "</div>"+
+                        "<div class='cplb' onclick='mycpxx2()'>" +
+                            "<img src='images/cp/fxt.png' title='繁星通'/>" +
+                            "<span class='dklx'>经营性贷款</span>"+
+                            "<span class='cpqx'>产品期限：2018-01-01</span>"+
+                            "<span class='cpll'>产品利率：1.35%</span>"+
+                            //"<img src='images/new.png' class='new'/>" +
+                        "</div>"+
+                        "<div class='cplb' onclick='mycpxx3()'>" +
+                            "<img src='images/cp/xxt.png' title='信薪通'/>" +
+                            "<span class='dklx'>消费性贷款</span>"+
+                            "<span class='cpqx'>产品期限：2018-01-01</span>"+
+                            "<span class='cpll'>产品利率：1.35%</span>"+
+                        "</div>"+
+                        "<div class='cplb' onclick='mycpxx4()'>" +
+                            "<img src='images/cp/gst.png' title='个税通'/>" +
+                            "<span class='dklx'>消费性贷款</span>"+
+                            "<span class='cpqx'>产品期限：2018-01-01</span>"+
+                            "<span class='cpll'>产品利率：1.35%</span>"+
+                        "</div>"+
+                        "<div class='cplb' onclick='mycpxx5()'>" +
+                            "<img src='images/cp/sxt.png' title='税信通'/>" +
+                            "<span class='dklx'>经营性贷款</span>"+
+                            "<span class='cpqx'>产品期限：2018-01-01</span>"+
+                            "<span class='cpll'>产品利率：1.35%</span>"+
+                        "</div>"+
+                        /*"<ul class='list' style='margin-top:-10px;'>"+
                             "<li onclick='mycpxx1()'>" +
                                 "<img src='images/cp/jqt.png'/>" +
                                 "<span>" +
@@ -122,19 +85,15 @@ function mycpgl(){
                                     "<font>产品利率：<font class='red'>8%</font></font>" +
                                 "</span>" +
                             "</li>"+
-                        "</ul>"+
-                    "</div>"+
-                    "<div class='buttons'>" +
-                        "<input type='button' class='btn btn-large btn-primary' value='返回' onclick='mywdsy()'/>" +
-                        "<input type='text' style='float:right;margin:20px 40px;' placeholder='搜索' onchange='search(this)'/>" +
+                        "</ul>"+*/
                     "</div>");
     $(".right").hide();
-    $("#cpgl").show();
+    $("#mainPage").show();
 }
 //产品信息
 function mycpxx1(){
-    window.scrollTo(0,0);//滚动条回到顶端
-    $("#cpgl").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>集群通<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+  
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mycpgl()'/>集群通</div>"+  
                     "<div class='content' style='padding-bottom:1em'>"+
                         "<table>" +
                             "<tr>" +
@@ -156,44 +115,10 @@ function mycpxx1(){
                                 "</td>" +
                                 "<td style='vertical-align:top;padding:1% 2%;'>" +
                                     "<div class='cpTitle'>办理流程:</div>"+
-                                    "<div class='bllcLeft step1'>客户提交申请</div>"+
-                                    "<div class='bllcLeft step2'>客户经理上门调查</div>"+
-                                    "<div class='bllcLeft step3'>审议通过</div>"+
-                                    "<div class='bllcLeft step4'>签订合同</div>"+
-                                    "<div class='bllcLeft step5'>发放贷款</div>"+
+                                    "<img src='images/lc.png'/>"+
                                 "</td>" +
                             "</tr>" +
                         "</table>"+
-                        
-                        /*"<table class='cpTable' style='width:98%;margin:0 auto;'>"+
-                            "<tr>"+                             
-                                "<th colspan='2'>产品信息</th>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td style='width:20%;'>产品类别</td>"+         
-                                "<td>经营贷款</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品描述</td>"+            
-                                "<td>。最低5000元，最高可达500万</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品授信区间</td>"+          
-                                "<td>5000元—500万元</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品期限</td>"+            
-                                "<td>2018-01-01</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品利率</td>"+            
-                                "<td>8%</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品还款规则</td>"+          
-                                "<td>按月还款</td>"+
-                            "</tr>"+
-                        "</table>"+*/
                         "<table class='cpTable llTable1'>"+
                             "<tr>"+                             
                                 "<th colspan='5'>经营性利率</th>"+  
@@ -297,222 +222,13 @@ function mycpxx1(){
                                 "<th></th>"+
                             "</tr>"+
                         "</table>"+
-                        /* "<table class='cpTable llTable2'>"+
-                            "<tr>"+                             
-                                "<th colspan='5'>经营性利率</th>"+  
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<th>期数</th>"+               
-                                "<th>每月还款</th>"+               
-                                "<th>利息</th>"+               
-                                "<th>本金</th>"+               
-                                "<th>剩余贷款金额</th>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>1</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>129.17</td>"+ 
-                                "<td>773.41</td>"+ 
-                                "<td>9226.59</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>2</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>119.18</td>"+ 
-                                "<td>783.40</td>"+ 
-                                "<td>8443.19</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>3</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>105.54</td>"+ 
-                                "<td>797.04</td>"+ 
-                                "<td>7646.15</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>4</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>89.76</td>"+ 
-                                "<td>803.82</td>"+ 
-                                "<td>6842.33</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>5</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>85.53</td>"+ 
-                                "<td>817.05</td>"+ 
-                                "<td>6025.28</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>6</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>77.83</td>"+ 
-                                "<td>824.75</td>"+ 
-                                "<td>5200.53</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>7</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>67.17</td>"+ 
-                                "<td>835.41</td>"+ 
-                                "<td>4365.12</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>8</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>50.93</td>"+ 
-                                "<td>851.65</td>"+ 
-                                "<td>3513.47</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>9</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>45.38</td>"+ 
-                                "<td>857.20</td>"+ 
-                                "<td>2656.27</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>10</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>33.20</td>"+ 
-                                "<td>869.38</td>"+ 
-                                "<td>1786.89</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>11</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>23.08</td>"+ 
-                                "<td>879.50</td>"+ 
-                                "<td>907.29</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>12</td>"+         
-                                "<td>918.35</td>"+   
-                                "<td>10.96</td>"+ 
-                                "<td>907.39</td>"+ 
-                                "<td>0.00</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<th>总计</th>"+               
-                                "<th>10846.73</th>"+               
-                                "<th>846.73</th>"+               
-                                "<th>10000</th>"+               
-                                "<th></th>"+
-                            "</tr>"+
-                        "</table>"+
-                        "<table class='cpTable llTable'>"+
-                            "<tr>"+                             
-                                "<th colspan='5'>经营性利率</th>"+  
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<th>期数</th>"+               
-                                "<th>每月还款</th>"+               
-                                "<th>利息</th>"+               
-                                "<th>本金</th>"+               
-                                "<th>剩余贷款金额</th>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>1</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>129.17</td>"+ 
-                                "<td>773.41</td>"+ 
-                                "<td>9226.59</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>2</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>119.18</td>"+ 
-                                "<td>783.40</td>"+ 
-                                "<td>8443.19</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>3</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>105.54</td>"+ 
-                                "<td>797.04</td>"+ 
-                                "<td>7646.15</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>4</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>89.76</td>"+ 
-                                "<td>803.82</td>"+ 
-                                "<td>6842.33</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>5</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>85.53</td>"+ 
-                                "<td>817.05</td>"+ 
-                                "<td>6025.28</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>6</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>77.83</td>"+ 
-                                "<td>824.75</td>"+ 
-                                "<td>5200.53</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>7</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>67.17</td>"+ 
-                                "<td>835.41</td>"+ 
-                                "<td>4365.12</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>8</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>50.93</td>"+ 
-                                "<td>851.65</td>"+ 
-                                "<td>3513.47</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>9</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>45.38</td>"+ 
-                                "<td>857.20</td>"+ 
-                                "<td>2656.27</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>10</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>33.20</td>"+ 
-                                "<td>869.38</td>"+ 
-                                "<td>1786.89</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>11</td>"+         
-                                "<td>902.58</td>"+   
-                                "<td>23.08</td>"+ 
-                                "<td>879.50</td>"+ 
-                                "<td>907.29</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>12</td>"+         
-                                "<td>918.35</td>"+   
-                                "<td>10.96</td>"+ 
-                                "<td>907.39</td>"+ 
-                                "<td>0.00</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<th>总计</th>"+               
-                                "<th>10846.73</th>"+               
-                                "<th>846.73</th>"+               
-                                "<th>10000</th>"+               
-                                "<th></th>"+
-                            "</tr>"+
-                        "</table>"+ */
-                    "</div>"+
-                    "<div class='buttons'>" +
-                        "<input type='button' class='btn btn-large btn-primary' value='返回' onclick='mycpgl()'/>" +
                     "</div>");
     $(".right").hide();
-    $("#cpgl").show();
+    $("#mainPage").show();
 }//产品信息
 function mycpxx2(){
-    window.scrollTo(0,0);//滚动条回到顶端
-    $("#cpgl").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>繁星通<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+  
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mycpgl()'/>繁星通</div>"+  
                     "<div class='content' style='padding-bottom:1em'>"+
                          "<table>" +
                             "<tr>" +
@@ -534,11 +250,7 @@ function mycpxx2(){
                                 "</td>" +
                                 "<td style='vertical-align:top;padding:1% 2%;'>" +
                                     "<div class='cpTitle'>办理流程:</div>"+
-                                    "<div class='bllcLeft step1'>客户提交申请</div>"+
-                                    "<div class='bllcLeft step2'>客户经理上门调查</div>"+
-                                    "<div class='bllcLeft step3'>审议通过</div>"+
-                                    "<div class='bllcLeft step4'>签订合同</div>"+
-                                    "<div class='bllcLeft step5'>发放贷款</div>"+
+                                    "<img src='images/lc.png'/>"+
                                 "</td>" +
                             "</tr>" +
                         "</table>"+
@@ -645,45 +357,13 @@ function mycpxx2(){
                                 "<th></th>"+
                             "</tr>"+
                         "</table>"+
-                        /*"<table class='cpTable'  style='width:98%;margin:0 auto;'>"+
-                           "<tr>"+                             
-                               "<th colspan='2'>产品信息</th>"+
-                           "</tr>"+
-                            "<tr>"+                             
-                                "<td style='width:20%;'>产品类别</td>"+         
-                                "<td>经营贷款</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品描述</td>"+            
-                                "<td>“繁星通”是太原市城区农村信用合作联社小微金融事业部根据差异化、特色化发展战略要求，引进国际先进贷款技术进行本土化改造推出的一项贷款业务品种，专门为在辖区内非集群市场内的、从事正当生意的小微企业主提供5000元—500万元的资金支持。</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品授信区间</td>"+          
-                                "<td>5000元—500万元</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品期限</td>"+            
-                                "<td>2018-01-01</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品利率</td>"+            
-                                "<td>8%</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品还款规则</td>"+          
-                                "<td>按月还款</td>"+
-                            "</tr>"+
-                        "</table>"+*/
-                    "</div>"+
-                    "<div class='buttons'>" +
-                        "<input type='button' class='btn btn-large btn-primary' value='返回' onclick='mycpgl()'/>" +
                     "</div>");
     $(".right").hide();
-    $("#cpgl").show();
+    $("#mainPage").show();
 }//产品信息
 function mycpxx3(){
-    window.scrollTo(0,0);//滚动条回到顶端
-    $("#cpgl").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>信薪通<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+  
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mycpgl()'/>信薪通</div>"+  
                     "<div class='content' style='padding-bottom:1em'>"+
                         "<table>" +
                             "<tr>" +
@@ -703,11 +383,7 @@ function mycpxx3(){
                                 "</td>" +
                                 "<td style='vertical-align:top;padding:1% 2%;'>" +
                                     "<div class='cpTitle'>办理流程:</div>"+
-                                    "<div class='bllcLeft step1'>客户提交申请</div>"+
-                                    "<div class='bllcLeft step2'>客户经理上门调查</div>"+
-                                    "<div class='bllcLeft step3'>审议通过</div>"+
-                                    "<div class='bllcLeft step4'>签订合同</div>"+
-                                    "<div class='bllcLeft step5'>发放贷款</div>"+
+                                    "<img src='images/lc.png'/>"+
                                 "</td>" +
                             "</tr>" +
                         "</table>"+
@@ -814,47 +490,15 @@ function mycpxx3(){
                                 "<th></th>"+
                             "</tr>"+
                         "</table>"+
-                        /*"<table class='cpTable'  style='width:98%;margin:0 auto;'>"+
-                           "<tr>"+                             
-                               "<th colspan='2'>产品信息</th>"+
-                           "</tr>"+
-                            "<tr>"+                             
-                                "<td style='width:20%;'>产品类别</td>"+         
-                                "<td>消费贷款</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品描述</td>"+            
-                                "<td>“信薪通”是太原市城区农村信用合作联社小微金融事业部以辖区内消费者信用为基础，对辖区内有明确消费意向的自然人发放的用于购置耐用消费品或支付指定消费用途的贷款。最低5000元，最高可达100万。</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品授信区间</td>"+          
-                                "<td>5000元—100万元</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品期限</td>"+            
-                                "<td>2018-01-01</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品利率</td>"+            
-                                "<td>8%</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品还款规则</td>"+          
-                                "<td>按月还款</td>"+
-                            "</tr>"+
-                        "</table>"+*/
-                    "</div>"+
-                    "<div class='buttons'>" +
-                        "<input type='button' class='btn btn-large btn-primary' value='返回' onclick='mycpgl()'/>" +
                     "</div>");
     $(".right").hide();
-    $("#cpgl").show();
+    $("#mainPage").show();
 }//产品信息
 function mycpxx4(){
-    window.scrollTo(0,0);//滚动条回到顶端
-    $("#cpgl").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>个税通<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+  
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mycpgl()'/>个税通</div>"+  
                     "<div class='content' style='padding-bottom:1em'>"+
-                         "<table>" +
+                        "<table>" +
                             "<tr>" +
                                 "<td style='width:50%;padding:1% 2%;'>" +
                                     "<div class='cpTitle'>产品类别:</div>"+
@@ -872,11 +516,7 @@ function mycpxx4(){
                                 "</td>" +
                                 "<td style='vertical-align:top;padding:1% 2%;'>" +
                                     "<div class='cpTitle'>办理流程:</div>"+
-                                    "<div class='bllcLeft step1'>客户提交申请</div>"+
-                                    "<div class='bllcLeft step2'>客户经理上门调查</div>"+
-                                    "<div class='bllcLeft step3'>审议通过</div>"+
-                                    "<div class='bllcLeft step4'>签订合同</div>"+
-                                    "<div class='bllcLeft step5'>发放贷款</div>"+
+                                    "<img src='images/lc.png'/>"+
                                 "</td>" +
                             "</tr>" +
                         "</table>"+
@@ -983,47 +623,15 @@ function mycpxx4(){
                                 "<th></th>"+
                             "</tr>"+
                         "</table>"+
-                        /*"<table class='cpTable'  style='width:98%;margin:0 auto;'>"+
-                           "<tr>"+                             
-                               "<th colspan='2'>产品信息</th>"+
-                           "</tr>"+
-                            "<tr>"+                             
-                                "<td style='width:20%;'>产品类别</td>"+         
-                                "<td>消费贷款</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品描述</td>"+            
-                                "<td>“个税通”是太原市城区农村信用合作联社小微金融事业部对按时缴纳个人所得税的个人发放的，用于个人或家庭消费、旅游、装修等可循环的人民币信用贷款业务. 最低5000元，最高可达100万</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品授信区间</td>"+          
-                                "<td>5000元—100万元</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品期限</td>"+            
-                                "<td>2018-01-01</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品利率</td>"+            
-                                "<td>8%</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品还款规则</td>"+          
-                                "<td>按月还款</td>"+
-                            "</tr>"+
-                        "</table>"+*/
-                    "</div>"+
-                    "<div class='buttons'>" +
-                        "<input type='button' class='btn btn-large btn-primary' value='返回' onclick='mycpgl()'/>" +
                     "</div>");
     $(".right").hide();
-    $("#cpgl").show();
+    $("#mainPage").show();
 }//产品信息
 function mycpxx5(){
-    window.scrollTo(0,0);//滚动条回到顶端
-    $("#cpgl").html("<div class='title'><img src='images/show.png' onclick='showNav()'/>税信通<img class='Right' src='images/dc.png' onclick='dc()'/></div>"+  
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mycpgl()'/>税信通</div>"+  
                     "<div class='content' style='padding-bottom:1em'>"+
-                         "<table>" +
+                        "<table>" +
                             "<tr>" +
                                 "<td style='width:50%;padding:1% 2%;'>" +
                                     "<div class='cpTitle'>产品类别:</div>"+
@@ -1039,43 +647,10 @@ function mycpxx5(){
                                 "</td>" +
                                 "<td style='vertical-align:top;padding:1% 2%;'>" +
                                     "<div class='cpTitle'>办理流程:</div>"+
-                                    "<div class='bllcLeft step1'>客户提交申请</div>"+
-                                    "<div class='bllcLeft step2'>客户经理上门调查</div>"+
-                                    "<div class='bllcLeft step3'>审议通过</div>"+
-                                    "<div class='bllcLeft step4'>签订合同</div>"+
-                                    "<div class='bllcLeft step5'>发放贷款</div>"+
+                                    "<img src='images/lc.png'/>"+
                                 "</td>" +
                             "</tr>" +
                         "</table>"+ 
-                        /*"<table class='cpTable'  style='width:98%;margin:0 auto;'>"+
-                           "<tr>"+                             
-                               "<th colspan='2'>产品信息</th>"+
-                           "</tr>"+
-                            "<tr>"+                             
-                                "<td style='width:20%;'>产品类别</td>"+         
-                                "<td>经营性贷款</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品描述</td>"+            
-                                "<td>“税信通”是太原市城区农村信用合作联社小微金融事业部根据税务局推荐，在综合评价小微企业经营情况及小微企业主纳税情况的基础上，对资信好的、按时足额纳税的小微企业客户发放的，用于短期生产经营周转的可循环使用的贷款业务。</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品授信区间</td>"+          
-                                "<td>5000元—100万元</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品期限</td>"+            
-                                "<td>2018-01-01</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品利率</td>"+            
-                                "<td>8%</td>"+
-                            "</tr>"+
-                            "<tr>"+                             
-                                "<td>产品还款规则</td>"+          
-                                "<td>按月还款</td>"+
-                            "</tr>"+
-                        "</table>"+*/
                         "<table class='cpTable llTable1'>"+
                             "<tr>"+                             
                                 "<th colspan='5'>经营性利率</th>"+  
@@ -1179,10 +754,7 @@ function mycpxx5(){
                                 "<th></th>"+
                             "</tr>"+
                         "</table>"+
-                    "</div>"+
-                    "<div class='buttons'>" +
-                        "<input type='button' class='btn btn-large btn-primary' value='返回' onclick='mycpgl()'/>" +
                     "</div>");
     $(".right").hide();
-    $("#cpgl").show();
+    $("#mainPage").show();
 }
