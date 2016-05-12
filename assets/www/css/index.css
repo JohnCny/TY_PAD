@@ -180,7 +180,7 @@ input[type=button].tab-button{margin:0 40px 0 40px;padding:15px 30px;background:
 .dj{color:#6e94c9;font-weight:bold;display:block;text-align:center;display:none;}
 .score{display:none;}
 .pf{color:#fff;font-size:25px;line-height:25px;font-weight:bold;display:block;text-align:center;}
-
+#ed1,#ed2,#ed3{display:none;}
 /*<!--客户管理-->*/
 .khgl{width:250px;height:250px;}
 .khgl img{width:215px;height:215px;}
