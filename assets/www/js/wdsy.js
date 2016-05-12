@@ -735,20 +735,20 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mywd
                             "<tr>"+                             
                                 "<th>客户单月可支配收入</th>"+         
                                 "<td>" +
-                                    "<input type='text' onchange='jyed(this)'/>" +
+                                    "<input type='text' onchange='jyed1(this)'/><font id='ed2'>0</font>" +
                                 "</td>"+
                             "</tr>"+
                             "<tr>"+                             
                                 "<th>是否属于超优客户</th>"+         
                                 "<td>" +
-                                    "<input type='text'/><font color='gray'>“是”填“1”，“否”填“0”</font>" +
+                                    "<input type='text' onchange='jyed2(this)'/><font color='gray'>“是”填“1”，“否”填“0”</font><font id='ed3'>0</font>" +
                                 "</td>"+
                             "</tr>"+
                         "</table>"+
                         "<table class='cpTable' style='margin-top:-20px;'>"+ 
                             "<tr>"+    
 								"<td style='width:33%;background:#fcd357;border:none;color:#fff;'>总分<font class='pf' id='zf'>0</font></td>"+
-								"<td style='width:33%;background:#f49857;border:none;color:#fff;'>评分等级<font class='pf' id='pfdj'>B</font></td>"+
+								"<td style='width:33%;background:#f49857;border:none;color:#fff;'>评分等级<font class='pf' id='pfdj'>B</font><font id='ed1'>0</font></td>"+
 								"<td style='background:#f26d6e;border:none;color:#fff;'>建议额度<font class='pf' id='jyed'>0</font></td>"+   
                             "</tr>"+
                         "</table>"+

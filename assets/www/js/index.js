@@ -25,22 +25,30 @@ function  checkBox(obj,id){   //单选样式
     
     if(num<60){//评分等级
         $("#pfdj").html("B"); 
+        $("#ed1").html("20000"); 
     }
     if(num>60&&num<80||num==60){//评分等级
         $("#pfdj").html("BB"); 
+        $("#ed1").html("20000"); 
     }
     if(num>80&&num<100||num==80){//评分等级
         $("#pfdj").html("BBB"); 
+        $("#ed1").html("30000"); 
     }
     if(num>100&&num<120||num==100){//评分等级
         $("#pfdj").html("A"); 
+        $("#ed1").html("100000"); 
     }
     if(num>120&&num<150||num==120){//评分等级
         $("#pfdj").html("AA"); 
+        $("#ed1").html("500000"); 
     }
     if(num>150||num==150){//评分等级
-        $("#pfdj").html("AAA"); 
+        $("#pfdj").html("AAA");
+        $("#ed1").html("1000000");  
     }
+	
+	jyed();
 }
 function qh(obj){//求和
     $(obj).parent().find(".score").html($(obj).val())
@@ -52,30 +60,67 @@ function qh(obj){//求和
             num=num+parseInt($(this).html());//求和        
     });
     $("#zf").html(num);//总分
-    if(num<60){//评分等级
+     if(num<60){//评分等级
         $("#pfdj").html("B"); 
+        $("#ed1").html("20000"); 
     }
     if(num>60&&num<80||num==60){//评分等级
         $("#pfdj").html("BB"); 
+        $("#ed1").html("20000"); 
     }
     if(num>80&&num<100||num==80){//评分等级
         $("#pfdj").html("BBB"); 
+        $("#ed1").html("30000"); 
     }
     if(num>100&&num<120||num==100){//评分等级
         $("#pfdj").html("A"); 
+        $("#ed1").html("100000"); 
     }
     if(num>120&&num<150||num==120){//评分等级
         $("#pfdj").html("AA"); 
+        $("#ed1").html("500000"); 
     }
     if(num>150||num==150){//评分等级
-        $("#pfdj").html("AAA"); 
+        $("#pfdj").html("AAA");
+        $("#ed1").html("1000000");  
     }
+	
+	jyed();
 }
-function jyed(obj){//建议额度
+function jyed1(obj){//建议额度
     if($(obj).val()=="")
-        $("#jyed").html("0");
+        $("#ed2").html("0");
     else
-        $("#jyed").html(parseInt($(obj).val())*10);    
+        $("#ed2").html(parseInt($(obj).val())*10);
+	
+	jyed();
+}
+function jyed2(obj){//建议额度	
+    if($(obj).val()=="")
+        $("#ed3").html("0");
+    if($(obj).val()=="1")
+		$("#ed3").html("1000000");
+	if($(obj).val()=="0")
+		$("#ed3").html("500000");
+	jyed();
+}
+function jyed(){	
+	var ed="0"
+	var a=parseInt($("#ed1").html())
+	var b=parseInt($("#ed2").html())	
+	var c=parseInt($("#ed3").html())
+	if(a<b)
+		if(a<c)
+			ed=a;
+		else
+			ed=c;
+	else
+		if(b<c)
+			ed=b;
+		
+		else
+			ed=c;
+	$("#jyed").html(ed)
 }
 function zs(obj){//只能输入整数
     $(obj).val( $(obj).val().replace(/[^\d]/g,''))
