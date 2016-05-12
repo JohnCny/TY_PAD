@@ -17,7 +17,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 								"<td style='width:110px;'>申请人性别</td>"+         
 								"<td>" +
 									"<label onclick='checkRadio(this)' class='radio'><input type='radio' name='sex'/>女</label>" +
-									"<label onclick='checkRadio(this)' class='radio'><input type='radio' name='sex'/>男</laabel>" +
+									"<label onclick='checkRadio(this)' class='radio'><input type='radio' name='sex'/>男</label>" +
 								"</td>"+
 							"</tr>"+
 							"<tr>"+                             

@@ -177,6 +177,10 @@ input[type=button].tab-button{margin:0 40px 0 40px;padding:15px 30px;background:
 .rcap .cyz{font-size:14px;line-height:20px;color:#808080;font-weight:bold;text-align:left;}
 .rcap .cyzxm{font-size:14px;color:#03a9f4;line-height:30px;text-align:left;}
 
+.dj{color:#6e94c9;font-weight:bold;display:block;text-align:center;}
+.score{display:none;}
+.pf{color:#fff;font-size:25px;line-height:25px;font-weight:bold;display:block;text-align:center;}
+
 /*<!--客户管理-->*/
 .khgl{width:250px;height:250px;}
 .khgl img{width:215px;height:215px;}
@@ -244,6 +248,8 @@ button.my-btn {padding:0 2px 3px 0;width:40px;margin:0 5px 5px 5px;}
 input[type=radio]{display:none;}
 .radio{display:inline-block;width:25px;height:25px;background:url(../images/radio.png) no-repeat;margin-top:5px;}
 .radio_checked{background:url(../images/radio_checked.png) no-repeat;}
+.checkbox{display:inline-block;height:25px;background:url(../images/checkbox.png) no-repeat;padding-left:25px;}
+.checkbox_checked{background:url(../images/checked.png) no-repeat;}
 label.radio{padding-left:30px;}
 /*饼图*/
 .zingchart {width: 600px;height: 500px;background:#fff;margin:0 auto;}

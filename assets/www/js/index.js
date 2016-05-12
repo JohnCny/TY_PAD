@@ -4,6 +4,82 @@ function  checkRadio(obj){   //单选样式
     $(obj).attr("class","radio radio_checked");
     $(obj).find('input[type=radio]').attr('checked',"checked");
 }
+function  checkBox(obj,id){   //单选样式 
+    $(obj).parent().find('.checkbox').attr("class","checkbox");
+    $(obj).parent().find('input[type=radio]').removeAttr('checked');
+    $(obj).attr("class","checkbox checkbox_checked");
+    $(obj).find('input[type=radio]').attr('checked',"checked");//单选样式
+    
+    var str=$("input[name="+id+"]:checked").val();//获取radio的value
+    $(obj).parent().parent().find('.dj').html(str.substr(0,1));//获取字符串第一个字符赋值
+    $(obj).parent().parent().find('.score').html(parseInt(str.substr(1)));//获取数字
+    
+    var num=0;
+    $(".score").each(function(){
+        if($(this).html()=="")
+            num=num;
+        else
+            num=num+parseInt($(this).html());//求和       
+    });
+    $("#zf").html(num);//总分
+    
+    if(num<60){//评分等级
+        $("#pfdj").html("B"); 
+    }
+    if(num>60&&num<80||num==60){//评分等级
+        $("#pfdj").html("BB"); 
+    }
+    if(num>80&&num<100||num==80){//评分等级
+        $("#pfdj").html("BBB"); 
+    }
+    if(num>100&&num<120||num==100){//评分等级
+        $("#pfdj").html("A"); 
+    }
+    if(num>120&&num<150||num==120){//评分等级
+        $("#pfdj").html("AA"); 
+    }
+    if(num>150||num==150){//评分等级
+        $("#pfdj").html("AAA"); 
+    }
+}
+function qh(obj){//求和
+    $(obj).parent().find(".score").html($(obj).val())
+    var num=0;
+    $(".score").each(function(){
+        if($(this).html()=="")
+            num=num;
+        else
+            num=num+parseInt($(this).html());//求和        
+    });
+    $("#zf").html(num);//总分
+    if(num<60){//评分等级
+        $("#pfdj").html("B"); 
+    }
+    if(num>60&&num<80||num==60){//评分等级
+        $("#pfdj").html("BB"); 
+    }
+    if(num>80&&num<100||num==80){//评分等级
+        $("#pfdj").html("BBB"); 
+    }
+    if(num>100&&num<120||num==100){//评分等级
+        $("#pfdj").html("A"); 
+    }
+    if(num>120&&num<150||num==120){//评分等级
+        $("#pfdj").html("AA"); 
+    }
+    if(num>150||num==150){//评分等级
+        $("#pfdj").html("AAA"); 
+    }
+}
+function jyed(obj){//建议额度
+    if($(obj).val()=="")
+        $("#jyed").html("0");
+    else
+        $("#jyed").html(parseInt($(obj).val())*10);    
+}
+function zs(obj){//只能输入整数
+    $(obj).val( $(obj).val().replace(/[^\d]/g,''))
+ }
 function checkimg(obj){//选择图片
     if($(obj).find(".zz").css("display")=="none"){
         $(obj).find(".zz").css("display","block")

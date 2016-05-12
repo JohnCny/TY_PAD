@@ -20,7 +20,7 @@ function mywdsy(){
                             "<div class='box wdsy2' onclick='khjjxx();pie()'><img src='images/khjjxx.png'/><span>客户进件信息</span></div>"+
                             "<div class='box wdsy3' onclick='khyyzk()'><img src='images/khyyzk.png'/><span>客户运营状况</span></div>"+
                             "<div class='box wdsy4' onclick='tz()'><img src='images/tz.png'/><span>通知</span></div>"+
-                            "<div class='box wdsy5' onclick='jljlxx()'><img src='images/jljlxx.png'/><span>奖励激励信息</span></div>"+                           
+                            "<div class='box wdsy5' onclick='edpggj()'><img src='images/jljlxx.png'/><span>额度评估工具</span></div>"+                           
                         "</div>");
     $(".right").hide();
     $("#mainPage").show();
@@ -507,51 +507,251 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='tz()
     $("#mainPage").show();
 }
 
-//奖励激励信息
-function jljlxx(){
+//额度评估工具
+function edpggj(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mywdsy()'/>奖励激励信息</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mywdsy()'/>额度评估工具</div>"+  
                     "<div class='content'>" +
-                        "<ul class='tab tab2 '>" +
-                            "<li class='active' onclick='changeTab(this,\"jljlxx\")'>奖励激励信息</li>" +
-                            "<li onclick='changeTab(this,\"fxbzjye\")'>风险保证金余额</li>" +
-                        "</ul>"+
-                        "<div class='tabDIV' id='jljlxx'>" +
-                            "<table class='cpTable' style='text-align:center;'>"+
-                                "<tr>"+                        
-                                    "<th>序号</th>"+  
-                                    "<th>奖励激励信息</th>"+
-                                    "<th>时间</th>"+
-                                "</tr>"+
-                                "<tr>"+    
-                                    "<td>1</td>"+
-                                    "<td>月销售额超出预计标准10%，奖励1000元</td>"+
-                                    "<td>2016-02-03</td>"+
-                                "</tr>"+
-                            "</table>"+
-                        "</div>"+
-                        "<div class='tabDIV' id='fxbzjye' style='display:none;'>" +
-                            "<table class='cpTable' style='text-align:center;'>"+
-                                "<tr>"+                        
-                                    "<th>工号</th>"+  
-                                    "<th>姓名</th>"+
-                                    "<th>返还总保证金 </th>"+
-                                    "<th>逾期保证金</th>"+
-                                    "<th>已扣保证金</th>"+
-                                    "<th>总保证金</th>"+
-                                    "<th>时间</th>"+
-                                "</tr>"+
-                                "<tr>"+    
-                                    "<td>01010419</td>"+
-                                    "<td>杨景琳</td>"+
-                                    "<td>1000</td>"+
-                                    "<td>0</td>"+
-                                    "<td>500</td>"+
-                                    "<td>3000</td>"+
-                                    "<td>2016-02-03</td>"+
-                                "</tr>"+
-                            "</table>"+
-                        "</div>"+
+                        "<table class='cpTable'>"+  
+							"<tr>"+                     
+                                "<th colspan='3'>"+
+									"客户：<input type='text'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+
+									"证件号码：<input type='text'/>"+
+								"</th>"+ 
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th style='width:180px;'>住房情况</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio1\")' class='checkbox'><input type='radio' name='radio1' value='A11'/>自置房屋(无贷款)</label>" +
+                                    "<label onclick='checkBox(this,\"radio1\")' class='checkbox'><input type='radio' name='radio1' value='B7'/>自置房屋(有贷款)</label>" +
+                                    "<label onclick='checkBox(this,\"radio1\")' class='checkbox'><input type='radio' name='radio1' value='C5'/>与父母同住</label>" +
+                                    "<label onclick='checkBox(this,\"radio1\")' class='checkbox'><input type='radio' name='radio1' value='D4'/>租房</label>" +
+                                    "<label onclick='checkBox(this,\"radio1\")' class='checkbox'><input type='radio' name='radio1' value='E0'/>无房</label>" +
+                                "</td>"+
+								"<td style='width:50px;'><font class='dj'></font><font class='score'>0</font> </td>"+   
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>金融资产情况（我行）</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio2\")' class='checkbox'><input type='radio' name='radio2' value='A7'/>20万以上</label>" +
+                                    "<label onclick='checkBox(this,\"radio2\")' class='checkbox'><input type='radio' name='radio2' value='B4'/>20万以下</label>" +
+                                    "<label onclick='checkBox(this,\"radio2\")' class='checkbox'><input type='radio' name='radio2' value='C0'/>无</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+   
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>大件消费品拥有情况</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio3\")' class='checkbox'><input type='radio' name='radio3' value='A5'/>完全产权车</label>" +
+                                    "<label onclick='checkBox(this,\"radio3\")' class='checkbox'><input type='radio' name='radio3' value='B2'/>贷款购车</label>" +
+                                    "<label onclick='checkBox(this,\"radio3\")' class='checkbox'><input type='radio' name='radio3' value='C0'/>无</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>单位性质</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio4\")' class='checkbox'><input type='radio' name='radio4' value='A16'/>机关/事业单位</label>" +
+                                    "<label onclick='checkBox(this,\"radio4\")' class='checkbox'><input type='radio' name='radio4' value='B14'/>国有</label>" +
+                                    "<label onclick='checkBox(this,\"radio4\")' class='checkbox'><input type='radio' name='radio4' value='C13'/>独资</label>" +
+                                    "<label onclick='checkBox(this,\"radio4\")' class='checkbox'><input type='radio' name='radio4' value='D10'/>合资</label>" +
+                                    "<label onclick='checkBox(this,\"radio4\")' class='checkbox'><input type='radio' name='radio4' value='E6'/>股份制</label>" +
+                                    "<label onclick='checkBox(this,\"radio4\")' class='checkbox'><input type='radio' name='radio4' value='F8'/>私营</label>" +
+                                    "<label onclick='checkBox(this,\"radio4\")' class='checkbox'><input type='radio' name='radio4' value='G4'/>其他</label>" +
+                                    "<label onclick='checkBox(this,\"radio4\")' class='checkbox'><input type='radio' name='radio4' value='H0'/>失业无社会救济</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>现工作单位工龄</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio5\")' class='checkbox'><input type='radio' name='radio5' value='A3'/>10年以上</label>" +
+                                    "<label onclick='checkBox(this,\"radio5\")' class='checkbox'><input type='radio' name='radio5' value='B2'/>5-10年</label>" +
+                                    "<label onclick='checkBox(this,\"radio5\")' class='checkbox'><input type='radio' name='radio5' value='C1'/>1-5年</label>" +
+                                    "<label onclick='checkBox(this,\"radio5\")' class='checkbox'><input type='radio' name='radio5' value='D0'/>一年以下</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>在现址居住时间</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio6\")' class='checkbox'><input type='radio' name='radio6' value='A7'/>6年以上</label>" +
+                                    "<label onclick='checkBox(this,\"radio6\")' class='checkbox'><input type='radio' name='radio6' value='B5'/>2-6年</label>" +
+                                    "<label onclick='checkBox(this,\"radio6\")' class='checkbox'><input type='radio' name='radio6' value='C2'/>2年以下</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>婚姻状况</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio7\")' class='checkbox'><input type='radio' name='radio7' value='A8'/>已婚有子女</label>" +
+                                    "<label onclick='checkBox(this,\"radio7\")' class='checkbox'><input type='radio' name='radio7' value='B5'/>已婚无子女</label>" +
+                                    "<label onclick='checkBox(this,\"radio7\")' class='checkbox'><input type='radio' name='radio7' value='C3'/>未婚</label>" +
+                                    "<label onclick='checkBox(this,\"radio7\")' class='checkbox'><input type='radio' name='radio7' value='D4'/>离婚</label>" +
+                                    "<label onclick='checkBox(this,\"radio7\")' class='checkbox'><input type='radio' name='radio7' value='E5'/>再婚</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>户籍情况</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio8\")' class='checkbox'><input type='radio' name='radio8' value='A5'/>本地户口</label>" +
+                                    "<label onclick='checkBox(this,\"radio8\")' class='checkbox'><input type='radio' name='radio8' value='B4'/>本地农户</label>" +
+                                    "<label onclick='checkBox(this,\"radio8\")' class='checkbox'><input type='radio' name='radio8' value='C2'/>外地户口</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>教育程度</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio9\")' class='checkbox'><input type='radio' name='radio9' value='A5'/>硕士及以上</label>" +
+                                    "<label onclick='checkBox(this,\"radio9\")' class='checkbox'><input type='radio' name='radio9' value='B4'/>本科</label>" +
+                                    "<label onclick='checkBox(this,\"radio9\")' class='checkbox'><input type='radio' name='radio9' value='C3'/>大专</label>" +
+                                    "<label onclick='checkBox(this,\"radio9\")' class='checkbox'><input type='radio' name='radio9' value='D1'/>高中及中专</label>" +
+                                    "<label onclick='checkBox(this,\"radio9\")' class='checkbox'><input type='radio' name='radio9' value='E0'/>初中及以下</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>职业资格证书拥有情况</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio10\")' class='checkbox'><input type='radio' name='radio10' value='A5'/>高级</label>" +
+                                    "<label onclick='checkBox(this,\"radio10\")' class='checkbox'><input type='radio' name='radio10' value='B4'/>中级</label>" +
+                                    "<label onclick='checkBox(this,\"radio10\")' class='checkbox'><input type='radio' name='radio10' value='C3'/>初级</label>" +
+                                    "<label onclick='checkBox(this,\"radio10\")' class='checkbox'><input type='radio' name='radio10' value='D1'/>其他</label>" +
+                                    "<label onclick='checkBox(this,\"radio10\")' class='checkbox'><input type='radio' name='radio10' value='E0'/>无</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>职称</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio11\")' class='checkbox'><input type='radio' name='radio11' value='A5'/>高级</label>" +
+                                    "<label onclick='checkBox(this,\"radio11\")' class='checkbox'><input type='radio' name='radio11' value='B4'/>中级</label>" +
+                                    "<label onclick='checkBox(this,\"radio11\")' class='checkbox'><input type='radio' name='radio11' value='C3'/>初级</label>" +
+                                    "<label onclick='checkBox(this,\"radio11\")' class='checkbox'><input type='radio' name='radio11' value='D1'/>其他</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>年龄</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio12\")' class='checkbox'><input type='radio' name='radio12' value='A3'/>18-30岁</label>" +
+                                    "<label onclick='checkBox(this,\"radio12\")' class='checkbox'><input type='radio' name='radio12' value='B5'/>30-45岁</label>" +
+                                    "<label onclick='checkBox(this,\"radio12\")' class='checkbox'><input type='radio' name='radio12' value='C4'/>45-55岁</label>" +
+                                    "<label onclick='checkBox(this,\"radio12\")' class='checkbox'><input type='radio' name='radio12' value='D2'/>55岁以上</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>健康情况</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio13\")' class='checkbox'><input type='radio' name='radio13' value='A10'/>良好</label>" +
+                                    "<label onclick='checkBox(this,\"radio13\")' class='checkbox'><input type='radio' name='radio13' value='B5'/>一般</label>" +
+                                    "<label onclick='checkBox(this,\"radio13\")' class='checkbox'><input type='radio' name='radio13' value='C0'/>差</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>公共记录</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio14\")' class='checkbox'><input type='radio' name='radio14' value='A20'/>无</label>" +
+                                    "<label onclick='checkBox(this,\"radio14\")' class='checkbox'><input type='radio' name='radio14' value='B-5'/>拖欠记录</label>" +
+                                    "<label onclick='checkBox(this,\"radio14\")' class='checkbox'><input type='radio' name='radio14' value='C-7'/>不良诉讼记录</label>" +
+                                    "<label onclick='checkBox(this,\"radio14\")' class='checkbox'><input type='radio' name='radio14' value='D-20'/>治安处罚记录</label>" +
+                                    "<label onclick='checkBox(this,\"radio14\")' class='checkbox'><input type='radio' name='radio14' value='E-40'/>犯罪记录</label>" +
+                                    "<label onclick='checkBox(this,\"radio14\")' class='checkbox'><input type='radio' name='radio14' value='F0'/>未确认</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>职务</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio15\")' class='checkbox'><input type='radio' name='radio15' value='A10'/>厅局级及以上(公务员)</label>" +
+                                    "<label onclick='checkBox(this,\"radio15\")' class='checkbox'><input type='radio' name='radio15' value='B7'/>处级(公务员)</label>" +
+                                    "<label onclick='checkBox(this,\"radio15\")' class='checkbox'><input type='radio' name='radio15' value='C5'/>科级(公务员)</label>" +
+                                    "<label onclick='checkBox(this,\"radio15\")' class='checkbox'><input type='radio' name='radio15' value='D3'/>一般干部(公务员)</label>" +
+                                    "<label onclick='checkBox(this,\"radio15\")' class='checkbox'><input type='radio' name='radio15' value='E5'/>企业负责人</label>" +
+                                    "<label onclick='checkBox(this,\"radio15\")' class='checkbox'><input type='radio' name='radio15' value='F3'/>中高层管理人员</label>" +
+                                    "<label onclick='checkBox(this,\"radio15\")' class='checkbox'><input type='radio' name='radio15' value='G1'/>一般管理人员</label>" +
+                                    "<label onclick='checkBox(this,\"radio15\")' class='checkbox'><input type='radio' name='radio15' value='H4'/>私营业主</label>" +
+                                    "<label onclick='checkBox(this,\"radio15\")' class='checkbox'><input type='radio' name='radio15' value='I0'/>一般员工</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>个人月收入（税前）</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio16\")' class='checkbox'><input type='radio' name='radio16' value='A26'/>1万元以上</label>" +
+                                    "<label onclick='checkBox(this,\"radio16\")' class='checkbox'><input type='radio' name='radio16' value='B22'/>0.8-1万元</label>" +
+                                    "<label onclick='checkBox(this,\"radio16\")' class='checkbox'><input type='radio' name='radio16' value='C18'/>0.5-0.8万元</label>" +
+                                    "<label onclick='checkBox(this,\"radio16\")' class='checkbox'><input type='radio' name='radio16' value='D12'/>0.3-0.5万元</label>" +
+                                    "<label onclick='checkBox(this,\"radio16\")' class='checkbox'><input type='radio' name='radio16' value='E7'/>0.1-0.3万元</label>" +
+                                    "<label onclick='checkBox(this,\"radio16\")' class='checkbox'><input type='radio' name='radio16' value='F5'/>0.1万元以下</label>" +
+                                    "<label onclick='checkBox(this,\"radio16\")' class='checkbox'><input type='radio' name='radio16' value='G0'/>无</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>债务收入比</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio17\")' class='checkbox'><input type='radio' name='radio17' value='A17'/>0</label>" +
+                                    "<label onclick='checkBox(this,\"radio17\")' class='checkbox'><input type='radio' name='radio17' value='B13'/>0-15%</label>" +
+                                    "<label onclick='checkBox(this,\"radio17\")' class='checkbox'><input type='radio' name='radio17' value='C10'/>15-25%</label>" +
+                                    "<label onclick='checkBox(this,\"radio17\")' class='checkbox'><input type='radio' name='radio17' value='D7'/>26-35%</label>" +
+                                    "<label onclick='checkBox(this,\"radio17\")' class='checkbox'><input type='radio' name='radio17' value='E2'/>36-49%</label>" +
+                                    "<label onclick='checkBox(this,\"radio17\")' class='checkbox'><input type='radio' name='radio17' value='F0'/>>50%</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>赡养人口</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio18\")' class='checkbox'><input type='radio' name='radio18' value='A5'/>无</label>" +
+                                    "<label onclick='checkBox(this,\"radio18\")' class='checkbox'><input type='radio' name='radio18' value='B4'/>1人</label>" +
+                                    "<label onclick='checkBox(this,\"radio18\")' class='checkbox'><input type='radio' name='radio18' value='C3'/>2人</label>" +
+                                    "<label onclick='checkBox(this,\"radio18\")' class='checkbox'><input type='radio' name='radio18' value='D2'/>3人</label>" +
+                                    "<label onclick='checkBox(this,\"radio18\")' class='checkbox'><input type='radio' name='radio18' value='E0'/>3人以上</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>推荐人</th>"+         
+                                "<td>" +
+                                    "<label onclick='checkBox(this,\"radio19\")' class='checkbox'><input type='radio' name='radio19' value='A3'/>本公司员工推荐</label>" +
+                                    "<label onclick='checkBox(this,\"radio19\")' class='checkbox'><input type='radio' name='radio19' value='B2'/>其他中介推荐</label>" +
+                                    "<label onclick='checkBox(this,\"radio19\")' class='checkbox'><input type='radio' name='radio19' value='C5'/>银行推荐</label>" +
+                                    "<label onclick='checkBox(this,\"radio19\")' class='checkbox'><input type='radio' name='radio19' value='D1'/>已担保客户推荐</label>" +
+                                    "<label onclick='checkBox(this,\"radio19\")' class='checkbox'><input type='radio' name='radio19' value='E0'/>无</label>" +
+                                "</td>"+
+								"<td><font class='dj'></font><font class='score'>0</font></td>"+  
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>客户经理主观印象</th>"+         
+                                "<td colspan='2'>" +
+                                    "<input type='text' onchange='qh(this)'/><font color='gray'>最高15分<font class='score'>0</font></font>" +
+                                "</td>"+ 
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>客户单月可支配收入</th>"+         
+                                "<td colspan='2'>" +
+                                    "<input type='text' onchange='jyed(this)'/>" +
+                                "</td>"+
+                            "</tr>"+
+                            "<tr>"+                             
+                                "<th>是否属于超优客户</th>"+         
+                                "<td colspan='2'>" +
+                                    "<input type='text'/><font color='gray'>“是”填“1”，“否”填“0”</font>" +
+                                "</td>"+
+                            "</tr>"+
+                        "</table>"+
+                        "<table class='cpTable' style='margin-top:-20px;'>"+ 
+                            "<tr>"+    
+								"<td style='width:33%;background:#fcd357;border:none;color:#fff;'>总分<font class='pf' id='zf'>0</font></td>"+
+								"<td style='width:33%;background:#f49857;border:none;color:#fff;'>评分等级<font class='pf' id='pfdj'>B</font></td>"+
+								"<td style='background:#f26d6e;border:none;color:#fff;'>建议额度<font class='pf' id='jyed'>0</font></td>"+   
+                            "</tr>"+
+                        "</table>"+
                     "</div>");
     $(".right").hide();
     $("#mainPage").show();
