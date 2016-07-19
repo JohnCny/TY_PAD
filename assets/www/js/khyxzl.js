@@ -2,7 +2,7 @@
 //房产证信息
 function fcz_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -11,7 +11,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
 							"<div class='step3' onclick='khyxzlcj()'>房产证</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-primary next' value='确定' onclick='khyxzlcj()'/>" +
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<div class='bottom-content'>"+
 							"<table id='fcz' class='cpTable' style='text-align:center;margin-top:20px;'>"+
 								"<tr>"+                             
@@ -36,7 +36,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
 }
 function fcz_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -45,7 +45,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
                             "<div class='step3' onclick='khyxzlcj()'>房产证</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-danger next' value='删除'/>" +
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<div class='bottom-content'>"+
                             "<div class='imgbox' style='width:95%;margin-left:2.5%;margin-top:20px;clear:both;'>" +
                                "<div class='images' onclick='checkimg(this)'><div class='zz'><img src='images/select.png'/></div><img src='images/zl/1/5.jpg'/></div>"+
@@ -60,7 +60,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
 //结婚证信息
 function jhz_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -69,7 +69,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
 							"<div class='step3' onclick='khyxzlcj()'>结婚证</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-primary next' value='确定' onclick='khyxzlcj()'/>" +
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<div class='bottom-content'>"+
 							"<table id='jhz' class='cpTable' style='text-align:center;margin-top:20px;'>"+
 								"<tr>"+                             
@@ -94,7 +94,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
 }
 function jhz_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -103,7 +103,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
                             "<div class='step3' onclick='khyxzlcj()'>结婚证</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-danger next' value='删除'/>" +
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<div class='bottom-content'>"+
                             "<div class='imgbox'>" +
                                 "<div class='images' onclick='checkimg(this)'><div class='zz'><img src='images/select.png'/></div><img src='images/zl/1/8.jpg'/></div>"+
@@ -116,7 +116,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
 //征信报告信息
 function zxbg_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -125,7 +125,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
 							"<div class='step3' onclick='khyxzlcj()'>征信报告</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-primary next' value='确定' onclick='khyxzlcj()'/>" +
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<div class='bottom-content'>"+
 							"<table id='zxbg' class='cpTable' style='text-align:center;margin-top:20px;'>"+
 								"<tr>"+                             
@@ -150,7 +150,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
 }
 function zxbg_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -159,7 +159,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
 							"<div class='step3' onclick='khyxzlcj()'>征信报告</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-danger next' value='删除'/>" +
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<div class='bottom-content'>"+
 							"<div class='imgbox'>" +
 								"<div class='images' onclick='checkimg(this)'><div class='zz'><img src='images/select.png'/></div><img src='images/zl/1/8.jpg'/></div>"+
@@ -172,7 +172,7 @@ $("#mainPage").show();
 //银行流水信息
 function yhls_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -181,7 +181,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
 							"<div class='step3' onclick='khyxzlcj()'>银行流水</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-primary next' value='确定' onclick='khyxzlcj()'/>" +
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<div class='bottom-content'>"+
 							"<table id='yhls' class='cpTable' style='text-align:center;margin-top:20px;'>"+
 								"<tr>"+                             
@@ -206,7 +206,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
 }
 function yhls_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -215,7 +215,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
 							"<div class='step3' onclick='khyxzlcj()'>银行流水</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-danger next' value='删除'/>" +
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<div class='bottom-content'>"+
 							"<div class='imgbox'>" +
 								"<div class='images' onclick='checkimg(this)'><div class='zz'><img src='images/select.png'/></div><img src='images/zl/1/8.jpg'/></div>"+
@@ -228,7 +228,7 @@ $("#mainPage").show();
 //其他影像资料
 function qtyxzl_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -237,7 +237,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
 							"<div class='step3' onclick='khyxzlcj()'>其他影像资料</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-primary next' value='确定' onclick='khyxzlcj()'/>" +
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<div class='bottom-content'>"+
 							"<table id='qtyxzl' class='cpTable' style='text-align:center;margin-top:20px;'>"+
 								"<tr>"+                             
@@ -262,7 +262,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
 }
 function qtyxzl_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -271,7 +271,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khyx
 							"<div class='step3' onclick='khyxzlcj()'>其他影像资料</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-danger next' value='删除'/>" +
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<div class='bottom-content'>"+
 							"<div class='imgbox'>" +
 								"<div class='images' onclick='checkimg(this)'><div class='zz'><img src='images/select.png'/></div><img src='images/zl/1/1.jpg'/></div>"+

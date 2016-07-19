@@ -2,7 +2,7 @@
 //企业基本信息
 function qyjbxx_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -11,7 +11,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 							"<div class='step3' onclick='khxxzlcj()'>企业基本信息</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<table class='cpTable no-border bottom-content'>"+
 							"<tr>"+                             
 								"<td style='width:110px;'>企业名称</td>"+          
@@ -55,7 +55,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 }
 function qyjbxx_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -64,7 +64,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>企业基本信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content'>"+
                             "<tr>"+                             
                                 "<td style='width:110px;'>企业名称</td>"+          
@@ -109,7 +109,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 //企业业务信息
 function qyywxx_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -118,7 +118,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 							"<div class='step3' onclick='khxxzlcj()'>企业业务信息</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<table class='cpTable no-border bottom-content'>"+
 							"<tr>"+                             
 								"<td style='width:110px;'>主要业务范围</td>"+          
@@ -143,7 +143,7 @@ $("#mainPage").show();
 }
 function qyywxx_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -152,7 +152,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 							"<div class='step3' onclick='khxxzlcj()'>企业业务信息</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<table class='cpTable no-border bottom-content'>"+
 							"<tr>"+                             
 								"<td style='width:110px;'>主要业务范围</td>"+          
@@ -178,7 +178,7 @@ $("#mainPage").show();
 //企业店铺信息
 function qydpxx_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -187,7 +187,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>企业店铺信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content'>"+
                             "<tr>"+                             
                                 "<td style='width:150px;'>营业场所类型</td>"+          
@@ -249,7 +249,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
   }
 function qydpxx_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -258,7 +258,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>企业店铺信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content'>"+
                             "<tr>"+                             
                                 "<td style='width:150px;'>营业场所类型</td>"+          
@@ -321,7 +321,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 //企业开户信息
 function qykhxx_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -330,7 +330,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 							"<div class='step3' onclick='khxxzlcj()'>企业开户信息</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<div class='bottom-content'>"+
 							"<table id='khxx' class='cpTable' style='text-align:center;'>"+
 								"<tr>"+      
@@ -355,7 +355,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 }
 function qykhxx_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -364,7 +364,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>企业开户信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<div class='bottom-content'>"+
                             "<table id='khxx' class='cpTable' style='text-align:center;'>"+
                                 "<tr>"+      
@@ -395,7 +395,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 //企业其他信息
 function qyqtxx_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -404,7 +404,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>企业其他信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<textarea placeholder='请在文本框内记录相关情况'  class='bottom-content' style='width:95%;margin-left:2.5%;margin-top:20px;height:25em;'></textarea>"+
                         
                     "</div>");
@@ -413,7 +413,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
     }
 function qyqtxx_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -422,7 +422,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>企业其他信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<textarea placeholder='请在文本框内记录相关情况' class='bottom-content' style='width:95%;margin-left:2.5%;margin-top:20px;height:25em;'>1999-2000年 于太钢六校对面经营熟肉店；2002-2004 将熟食店变更为小饭店（赚4、5万）；2004春-2004夏 于漪汾桥西开饭店（投入10万，几乎全赔，余5000元）；2004夏-2005年中 回清徐；2005.8-2007年 于晋安门口小饭馆（转让费1万6，房租1万5，赚了5、6万，炒股花去3万，余2万元）；2007年 盘下旁边理发店，扩大经营；2007-2010买房用完积蓄（至2010年赚50万，买房30万，装修、家具等，几乎花光）；2012-2013：赚5、6万；2013-2014：赚3、4万（共余9万）；2014-2015：赚10-11万；（共余：195000元）2015.3月：与合伙人两家盘下现较大店面经营味香村，转让费10万元，初始运营资金2万元，共12万。几天后两家协商由客户刘丽云独立经营，付清合伙人投资部分，并多给合伙人2万元将生意转为己有（因此客户转让初始共支出14万，装修2万7，请客1万多，余18000元）。可证实盘下味香村时资金为自有。</textarea>"+
                         
                     "</div>");

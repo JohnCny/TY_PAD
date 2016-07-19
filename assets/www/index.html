@@ -5,6 +5,7 @@
     <meta charset="utf-8"> 
     <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
 	<title>PAD</title> 	 	
+	<link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
 	<link rel="stylesheet" href="css/btn.css" /> 
 	<link rel="stylesheet" href="css/login.css" /> 	
 	<link rel="stylesheet" href="css/index.css" />	
@@ -33,17 +34,19 @@
 	<div id="page1" class="left" style="display:none;">		
 		<div onclick='showNav()' class="hidebt"><img src='images/show_list.png'/></div>		
 		<ul class="nav">
-			<li style="padding-bottom:0;"><img src="images/user/01.png" class="user"/><p>上次登录时间：<br/>2016.04.04  12:00:00</p></li>
+			<li style="padding-bottom:0;"><img src="images/user/01.png" class="user"/><p>上次登录时间：<br/>2016.04.05  12:00:00</p></li>
 			<li class="li" id="index" onclick="changeNav(this,1);mywdsy()"><img src="images/1.png"/><span>我的首页</span></li>
 			<li class="li" id="customer" onclick="changeNav(this,2);mykhgl()"><img src="images/2.png"/><span>客户管理</span></li>
-			<li class="li" id="customer" onclick="changeNav(this,3);myjjgl()"><img src="images/3.png"/><span>进件管理</span></li>
-			<li class="li" onclick="changeNav(this,4);mywdjh()"><img src="images/4.png"/><span>计划管理</span></li>
-			<li class="li" onclick="changeNav(this,5);myshsp()"><img src="images/5.png"/><span>审核审批</span></li>
+			<li class="li" id="customer" onclick="changeNav(this,3);myzbgl()"><img src="images/3.png"/><span>众包管理</span></li>
+			<li class="li" id="customer" onclick="changeNav(this,4);myjjgl()"><img src="images/4.png"/><span>进件管理</span></li>
+			<li class="li" onclick="changeNav(this,5);mywdjh()"><img src="images/5.png"/><span>计划管理</span></li>
+			<!-- <li class="li" onclick="changeNav(this,6);myshsp()"><img src="images/6.png"/><span>审核审批</span></li>-->
 		</ul>
 	</div>
 	<div id="mainPage" class="right" style="display:none;">
 		<!-- 我的首页 wdsy.js / 产品查询cpgl.js-->
 		<!-- 客户管理 khgl.js / khwh.js-->
+		<!-- 众包管理 zbgl.js -->
 		<!-- 进件管理 jjgl.js -->
 			<!-- 客户基本信息khjbxx.js -->
 			<!-- 客户经营信息khjyxx.js -->
@@ -59,6 +62,8 @@
 	</div><!-- /text -->
 </body>
 <script src="js/jquery-1.7.2.min.js"></script>
+<!-- 树 -->
+<script type="text/javascript" src="js/jquery.ztree.core-3.5.js"></script>
 <!-- 饼图 -->
 <script src="js/zingchart.min.js"></script>
 <script src="js/zingchart.jquery.js"></script>
@@ -75,6 +80,7 @@
 <script src="js/khcwxx_zcfzb.js"></script>
 <script src="js/khcwxx_syb.js"></script>
 <script src="js/khwh.js"></script>
+<script src="js/zbgl.js"></script>
 <script src="js/jjgl.js"></script>
 <script src="js/khyxzl.js"></script>
 <script src="js/wdsy.js"></script>

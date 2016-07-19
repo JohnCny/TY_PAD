@@ -2,7 +2,7 @@
 //个人信息
 function grxx_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -11,7 +11,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 							"<div class='step3' onclick='khxxzlcj()'>个人信息</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<table class='cpTable no-border bottom-content'>"+   
 							"<tr>"+                             
 								"<td style='width:110px;'>申请人性别</td>"+         
@@ -65,7 +65,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 }
 function grxx_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -74,7 +74,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>个人信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content'>"+
                             "<tr>"+                             
                                 "<td style='width:110px;'>申请人性别</td>"+         
@@ -129,7 +129,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 //家庭信息
 function jtxx_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -138,7 +138,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>家庭信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content'>"+
                             "<tr>"+                             
                                 "<td style='width:145px;'>家庭成员</td>"+         
@@ -186,7 +186,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
   }
 function jtxx_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -195,7 +195,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>家庭信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content'>"+
                             "<tr>"+                             
                                 "<td style='width:145px'>家庭成员</td>"+         
@@ -244,7 +244,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 //车产信息
 function ccxx_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -253,7 +253,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>车产信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<div class='bottom-content'>"+
     						"<table id='ccxx' class='cpTable' style='text-align:center;'>"+
                                 "<tr>"+                             
@@ -292,7 +292,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 }
 function ccxx_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -301,7 +301,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>车产信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<div class='bottom-content'>"+
                             "<table id='ccxx' class='cpTable' style='text-align:center;'>"+
                                 "<tr>"+                             
@@ -341,7 +341,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 //房产信息
 function fcxx_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -350,7 +350,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>房产信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<div class='bottom-content'>"+
     						"<table id='fcxx' class='cpTable' style='text-align:center;'>"+
                                 "<tr>"+                             
@@ -389,7 +389,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
   }
 function fcxx_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -398,7 +398,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 							"<div class='step3' onclick='khxxzlcj()'>房产信息</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<div class='bottom-content'>"+
 							"<table id='fcxx' class='cpTable' style='text-align:center;'>"+
 								"<tr>"+                             
@@ -438,7 +438,7 @@ $("#mainPage").show();
 //联系人信息
 function lxrxx_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -447,7 +447,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>联系人信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<div class='bottom-content'>"+
                             "<table class='cpTable' id='lxrxx' style='text-align:center;'>"+
                                 "<tr>"+                             
@@ -474,7 +474,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
   }
 function lxrxx_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -483,7 +483,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>联系人信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<div class='bottom-content'>"+
                             "<table class='cpTable' id='lxrxx' style='text-align:center;'>"+
                                 "<tr>"+                             
@@ -511,7 +511,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 //居住信息
 function jzxx_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -520,7 +520,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>居住信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content'>"+
                             "<tr>"+                             
                                 "<td style='width:145px'>居住类型</td>"+         
@@ -585,7 +585,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
   }
 function jzxx_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -594,7 +594,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>居住信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content'>"+
                             "<tr>"+                             
                                 "<td style='width:145px;'>居住类型</td>"+         

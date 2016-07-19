@@ -20,7 +20,8 @@ function mywdsy(){
                             "<div class='box wdsy2' onclick='khjjxx();pie()'><img src='images/khjjxx.png'/><span>客户进件信息</span></div>"+
                             "<div class='box wdsy3' onclick='khyyzk()'><img src='images/khyyzk.png'/><span>客户运营状况</span></div>"+
                             "<div class='box wdsy4' onclick='tz()'><img src='images/tz.png'/><span>通知</span></div>"+
-                            "<div class='box wdsy5' onclick='edpggj()'><img src='images/jljlxx.png'/><span>额度评估工具</span></div>"+                           
+                            "<div class='box wdsy5' onclick='edpggj()'><img src='images/jljlxx.png'/><span>额度评估工具</span></div>"+    
+                            "<div class='box wdsy6' onclick='sdhjypz()'><img src='images/sdhjypz.png'/><span>审贷会决议配置</span></div>"+                            
                         "</div>");
     $(".right").hide();
     $("#mainPage").show();
@@ -159,7 +160,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mywd
                         "<table class='cpTable' style='width:100%;height:85%;position:fixed;top:100px;bottom:0;text-align:center;'>"+
                             "<tr>"+                             
                                 "<td style='width:33.3%;' onclick='sdhtz()'>" +
-                                    "<img src='images/sdh.png'/><br/><span class='tongzhi'>10</span><br/>" +
+                                    "<img src='images/sdhtz.png'/><br/><span class='tongzhi'>10</span><br/>" +
                                     "<span class='tz_message'>审贷会通知</span>" +
                                 "</td>"+                           
                                 "<td style='width:33.3%;' onclick='pxtz()'>" +
@@ -735,20 +736,20 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mywd
                             "<tr>"+                             
                                 "<th>客户单月可支配收入</th>"+         
                                 "<td>" +
-                                    "<input type='text' onchange='jyed1(this)'/><font id='ed2'>0</font>" +
+                                    "<input type='text' onchange='jyed1(this)'/><font id='ed2'>1000000</font>" +
                                 "</td>"+
                             "</tr>"+
                             "<tr>"+                             
                                 "<th>是否属于超优客户</th>"+         
                                 "<td>" +
-                                    "<input type='text' onchange='jyed2(this)'/><font color='gray'>“是”填“1”，“否”填“0”</font><font id='ed3'>0</font>" +
+                                    "<input type='text' onchange='jyed2(this)'/><font color='gray'>“是”填“1”，“否”填“0”</font><font id='ed3'>500000</font>" +
                                 "</td>"+
                             "</tr>"+
                         "</table>"+
                         "<table class='cpTable' style='margin-top:-20px;'>"+ 
                             "<tr>"+    
 								"<td style='width:33%;background:#fcd357;border:none;color:#fff;'>总分<font class='pf' id='zf'>0</font></td>"+
-								"<td style='width:33%;background:#f49857;border:none;color:#fff;'>评分等级<font class='pf' id='pfdj'>B</font><font id='ed1'>0</font></td>"+
+								"<td style='width:33%;background:#f49857;border:none;color:#fff;'>评分等级<font class='pf' id='pfdj'>B</font><font id='ed1'>20000</font></td>"+
 								"<td style='background:#f26d6e;border:none;color:#fff;'>建议额度<font class='pf' id='jyed'>0</font></td>"+   
                             "</tr>"+
                         "</table>"+
@@ -758,4 +759,107 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mywd
                     "</div>");
     $(".right").hide();
     $("#mainPage").show();
+}
+//审贷会决议配置
+function sdhjypz(){
+    window.scrollTo(0,0);//滚动条回到顶端
+    $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mywdsy()'/>我的首页-审贷会决议配置</div>"+  
+                        "<div class='content'>" +
+                            "<table class='cpTable jjTable' style='text-align:center;'>"+
+                                "<tr>"+                         
+                                    "<th></th>"+                 
+                                    "<th>产品名称</th>"+  
+                                    "<th>产品类别</th>"+
+                                    "<th>产品授信区间</th>"+
+                                    "<th>产品期限</th>"+
+                                    "<th>产品利率</th>"+ 
+                                "</tr>"+
+                                "<tr onclick='check(this)'>"+    
+                                    "<td><span class='radio'><input type='radio'/></span></td>"+
+                                    "<td>集群通</td>"+
+                                    "<td>经营贷款</td>"+
+                                    "<td>5000元—500万元</td>"+
+                                    "<td>2018-01-01</td>"+
+                                    "<td>8%</td>"+
+                                "</tr>"+
+                                "<tr onclick='check(this)'>"+    
+                                    "<td><span class='radio'><input type='radio'/></span></td>"+
+                                    "<td>繁星通</td>"+
+                                    "<td>经营贷款</td>"+
+                                    "<td>5000元—500万元</td>"+
+                                    "<td>2018-01-01</td>"+
+                                    "<td>8%</td>"+
+                                "</tr>"+
+                                "<tr onclick='check(this)'>"+    
+                                    "<td><span class='radio'><input type='radio'/></span></td>"+
+                                    "<td>信薪通</td>"+
+                                    "<td>消费贷款</td>"+
+                                    "<td>5000元—100万元</td>"+
+                                    "<td>2018-01-01</td>"+
+                                    "<td>8%</td>"+
+                                "</tr>"+
+                                "<tr onclick='check(this)'>"+    
+                                    "<td><span class='radio'><input type='radio'/></span></td>"+
+                                    "<td>个税通</td>"+
+                                    "<td>消费贷款</td>"+
+                                    "<td>5000元—100万元</td>"+
+                                    "<td>2018-01-01</td>"+
+                                    "<td>8%</td>"+
+                                "</tr>"+
+                                "<tr onclick='check(this)'>"+    
+                                    "<td><span class='radio'><input type='radio'/></span></td>"+
+                                    "<td>税信通</td>"+
+                                    "<td>经营性贷款</td>"+
+                                    "<td>5000元—100万元</td>"+
+                                    "<td>2018-01-01</td>"+
+                                    "<td>8%</td>"+
+                                "</tr>"+
+                            "</table>"+  
+                            "<p>"+
+                                "<input type='button' class='btn btn-primary btn-large' value='配置' onclick='pz()'/>"+
+                            "</p>"+          
+                        "</div>");    
+        $(".right").hide();
+        $("#mainPage").show();    
+    }
+//配置
+function pz(){
+window.scrollTo(0,0);//滚动条回到顶端
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='sdh()'/>我的首页-审贷会决议配置-配置</div>"+  
+                    "<div class='content'>"+
+                        "<table class='cpTable'>"+   
+                            "<tr>"+                        
+                                "<th>产品信息</th>"+  
+                            "</tr>"+
+                        "</table>"+
+                        "<table class='cpTable khjbxx'>"+  
+                            "<tr>"+                             
+                                "<td>产品名称：<span>集群通</span></td>"+  
+                                "<td>产品类别：<span>经营贷款</span></td>"+  
+                                "<td>产品授信区间：<span>5000元—500万元</span></td>"+ 
+                                "<td>产品期限：<span>2018-01-01</span></td>"+  
+                                "<td>产品利率：<span>8%</span></td>"+
+                            "</tr>"+
+                            "<tr>"+          
+                                "<td colspan='5'>最小金额（单位：万）：<input type='text'></td>"+
+                            "</tr>"+
+                            "<tr>"+          
+                                "<td colspan='5'>最大金额（单位：万）：<input type='text'></td>"+
+                            "</tr>"+
+                            "<tr>"+          
+                                "<td colspan='5'>审贷会决议方式：<select><option>一致通过</option><option>多数通过</option></select></td>"+
+                            "</tr>"+
+                            "<tr>"+          
+                                "<td colspan='5'>需要签批最小金额：<input type='text'></td>"+
+                            "</tr>"+
+                            "<tr>"+          
+                                "<td colspan='5'>签批角色：<select><option>管理岗</option></select></td>"+
+                            "</tr>"+
+                        "</table>"+ 
+                        "<p>"+
+                            "<input type='button' class='btn btn-primary btn-large' value='提交' onclick='sdhjypz()'/>"+
+                        "</p>"+                        
+                    "</div>");
+  $(".right").hide();
+  $("#mainPage").show();
 }

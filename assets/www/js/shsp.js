@@ -103,7 +103,7 @@ $("#jjsp").html("<div class='title'>" +
                             "<div class='step2'>调阅客户信息</div>"+
                             "<div class='step2'>填写审核信息</div>"+
                             "<input type='button' class='btn btn-primary btn-large next' value='下一步' onclick='dykhxx()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<div class='bottom-content' style='padding-top:5px;'>"+
                             "<table class='cpTable jjTable' style='text-align:center;margin-top:0;'>"+
                                 "<tr>"+                         
@@ -144,7 +144,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='shsp
                             "<div class='step3'>调阅客户信息</div>"+
                             "<div class='step2'>填写审核信息</div>"+                  
                             "<input type='button' class='btn btn-primary btn-large next' value='下一步' onclick='txshxx()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<div class='bottom-content'>"+
                             "<ul class='tab tab2'>" +
                                 "<li class='active' onclick='changeTab(this,\"khjbxx\")'>客户基本信息</li>" +
@@ -332,7 +332,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='dykh
 							"<div class='step3' onclick='dykhxx()'>调阅客户信息</div>"+
 							"<div class='step3'>填写审核信息</div>"+
 							"<input type='button' class='btn btn-large btn-primary next' value='提交' onclick=''/>"+
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<div class='bottom-content'>"+
 							"<table class='cpTable'>"+   
 								"<tr>"+                        

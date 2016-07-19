@@ -1,8 +1,26 @@
+
 function  checkRadio(obj){   //单选样式 
     $(obj).parent().find('.radio').attr("class","radio");
     $(obj).parent().find('input[type=radio]').removeAttr('checked');
     $(obj).attr("class","radio radio_checked");
     $(obj).find('input[type=radio]').attr('checked',"checked");
+}
+function  checkBox2(obj,id){   //多选样式 
+    if($(obj).find('input[type=checkbox]').attr("checked")=="checked"){
+        $(obj).find('input[type=checkbox]').removeAttr('checked');
+        $(obj).attr("class","checkbox");
+    }
+    else{
+        $(obj).find('input[type=checkbox]').attr('checked','checked');
+        $(obj).attr("class","checkbox checkbox_checked");
+    }    
+}
+function setSdhcy(){
+    var chk_value =[]; 
+    $("#checkbox:checked").each(function(){
+        chk_value.push($(this).parent().text()); 
+    });
+    $("#sdhcy").val(chk_value)
 }
 function  checkBox(obj,id){   //单选样式 
     $(obj).parent().find('.checkbox').attr("class","checkbox");
@@ -89,7 +107,7 @@ function qh(obj){//求和
 }
 function jyed1(obj){//建议额度
     if($(obj).val()=="")
-        $("#ed2").html("0");
+        $("#ed2").html("1000000");
     else
         $("#ed2").html(parseInt($(obj).val())*10);
 	
@@ -97,7 +115,7 @@ function jyed1(obj){//建议额度
 }
 function jyed2(obj){//建议额度	
     if($(obj).val()=="")
-        $("#ed3").html("0");
+        $("#ed3").html("500000");
     if($(obj).val()=="1")
 		$("#ed3").html("1000000");
 	if($(obj).val()=="0")
@@ -178,13 +196,13 @@ function check(obj){
 }
 
 //搜索DIV
-function search(obj){
+function search(obj,name){
     var value=$(obj).val();
     if(value==""){
-        $(".cplb").show();
+        $("."+name).show();
     }
     else{
-        $(".cplb").each(function(){
+        $("."+name).each(function(){
             if(this.innerHTML.indexOf(value)>=0){
                 $(this).show();
             }                       
@@ -195,20 +213,29 @@ function search(obj){
         })
     }    
 }
-function searchTR(obj){
-    var value=$(obj).val();
-    if(value==""){
+function searchTR(obj){//搜索表格数据
+    var value=$(obj).val();//获取文本框内容
+    if(value==""){//文本框为空
         $("tr.search").show();
     }
-    else{
-        $("tr.search").each(function(){
-            if(this.innerHTML.indexOf(value)>=0){
-                $(this).show();
-            }                       
-            else{
-                $(this).hide();
+    else{//文本框不为空
+        var a=value.split(" ")//文本内容按“空格”分为数组
+        $("tr.search").each(function(){//遍历表格每行记录
+            var sum=0;//未找到错误统计
+            var n = new Array();//创建数组，存放每个条件搜索结果
+            for(i=0;i<a.length;i++){//遍历搜索条件
+                if(this.innerHTML.indexOf(a[i])>=0){//包含搜索条件的搜索结果为0
+                   n[i]=0;
+                }   
+                else{//不包含搜索条件的搜索结果为1
+                   n[i]=1;
+                }
+                sum+=n[i]// 错误统计              
             }
-                
+            if(sum==0) //包含所有搜索条件
+                $(this).show();//显示行
+            else
+                $(this).hide();//隐藏行
         })
     }    
 }

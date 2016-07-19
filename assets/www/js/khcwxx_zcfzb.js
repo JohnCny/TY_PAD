@@ -1,7 +1,7 @@
 //资产负债表-资产状况
 function zczk_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -10,7 +10,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>资产状况</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content'>"+
                             "<tr>"+                             
                                 "<td style='width:90px;'>现金</td>"+          
@@ -49,7 +49,7 @@ $("#mainPage").show();
 }
 function zczk_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -58,7 +58,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>资产状况</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content'>"+
                             "<tr>"+                             
                                 "<td style='width:90px;'>现金</td>"+          
@@ -98,7 +98,7 @@ $("#mainPage").show();
 //资产负债表-负债情况
 function fzqk_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -107,7 +107,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>负债情况</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content'>"+
                             "<tr>"+                             
                                 "<td style='width:110px;'>应付账款</td>"+          
@@ -140,7 +140,7 @@ $("#mainPage").show();
 }
 function fzqk_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -149,7 +149,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>负债情况</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content'>"+
                             "<tr>"+                             
                                 "<td style='width:90px;'>应付账款</td>"+          
@@ -183,7 +183,7 @@ $("#mainPage").show();
 //资产负债表-权益状况
 function qyzk_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -192,7 +192,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>权益状况</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<div class='bottom-content'>"+
                             "<table class='cpTable' id='csqy'>"+
                                 "<tr>"+                             
@@ -238,7 +238,7 @@ $("#mainPage").show();
 }
 function qyzk_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -247,7 +247,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>权益状况</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<div class='bottom-content'>"+
                             "<table class='cpTable' id='csqy'>"+
                                 "<tr>"+                             
@@ -294,7 +294,7 @@ $("#mainPage").show();
 //资产负债表-其他信息
 function zcfzqtxx_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+  
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -303,7 +303,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 							"<div class='step3' onclick='khxxzlcj()'>其他信息</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-						"</div><div class='line'></div>"+              
+						"</div><div class='myline'></div>"+              
 						"<table class='cpTable no-border bottom-content'>"+
 							"<tr>"+  
 								"<td style='width:170px;'>销售额交叉检验</td>"+ 
@@ -324,7 +324,7 @@ $("#mainPage").show();
 }
 function zcfzqtxx_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+       
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -333,7 +333,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 							"<div class='step3' onclick='khxxzlcj()'>其他信息</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-						"</div><div class='line'></div>"+           
+						"</div><div class='myline'></div>"+           
 						"<table class='cpTable no-border bottom-content'>"+
 							"<tr>"+  
 								"<td style='width:170px;'>销售额交叉检验</td>"+ 

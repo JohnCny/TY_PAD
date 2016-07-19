@@ -1,7 +1,7 @@
 //损益表-利润表标准表
 function lrbbzb_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -10,7 +10,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>利润表标准表</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content' style='width:95%;'>"+
                             "<tr>"+                             
                                 "<td style='width:235px;'>主营业务收入</td>"+          
@@ -68,7 +68,7 @@ $("#mainPage").show();
 }
 function lrbbzb_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -77,7 +77,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>利润表标准表</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<p><input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/></p>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content' style='width:95%;'>"+
                             "<tr>"+                             
                                 "<td style='width:235px;'>主营业务收入</td>"+          
@@ -136,7 +136,7 @@ $("#mainPage").show();
 //损益表-利润表简表
 function lrbjb_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
 					"<div class='content'>"+
 						"<div class='jjstep'>" +
 							"<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -145,7 +145,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
 							"<div class='step3' onclick='khxxzlcj()'>利润表简表</div>"+
 							"<div class='step3'>信息录入</div>"+
 							"<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-						"</div><div class='line'></div>"+
+						"</div><div class='myline'></div>"+
 						"<table class='cpTable no-border bottom-content' style='width:95%;'>"+
 							"<tr>"+                             
 								"<td style='width:235px;'>主营业务收入</td>"+          
@@ -203,7 +203,7 @@ $("#mainPage").show();
 }
 function lrbjb_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -212,7 +212,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>利润表简表</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content' style='width:95%;'>"+
                             "<tr>"+                             
                                 "<td style='width:235px;'>主营业务收入</td>"+          
@@ -271,7 +271,7 @@ $("#mainPage").show();
 //损益表-其他信息
 function syqtxx_add(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -280,7 +280,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>其他信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content'>"+
                             "<tr>"+                             
                                 "<td style='width:230px;'>其它影响现金流的因素、 未来12个月的支出/收入计划:</td>"+          
@@ -313,7 +313,7 @@ $("#mainPage").show();
 }
 function syqtxx_edit(){
 window.scrollTo(0,0);//滚动条回到顶端
-$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理</div>"+  
+$("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxxzlcj()'/>进件管理-新增进件</div>"+  
                     "<div class='content'>"+
                         "<div class='jjstep'>" +
                             "<div class='step1' onclick='myjjgl()'>税信通</div>"+
@@ -322,7 +322,7 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='khxx
                             "<div class='step3' onclick='khxxzlcj()'>其他信息</div>"+
                             "<div class='step3'>信息录入</div>"+
                             "<input type='button' class='btn btn-large btn-primary next' value='保存' onclick='khxxzlcj()'/>"+
-                        "</div><div class='line'></div>"+
+                        "</div><div class='myline'></div>"+
                         "<table class='cpTable no-border bottom-content'>"+
                             "<tr>"+                             
                                 "<td style='width:230px;'>其它影响现金流的因素、 未来12个月的支出/收入计划:</td>"+          
