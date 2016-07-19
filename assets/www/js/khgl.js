@@ -5,6 +5,7 @@ $("#mainPage").html("<div class='title'>客户管理</div>"+
                     "<div class='content'>" +
                         "<div class='box khgl' onclick='newUser()'><img src='images/xjkh.jpg'/><span>新建客户</span></div>"+
                         "<div class='box khgl' onclick='editUser()'><img src='images/khwh.jpg'/><span>客户维护</span></div>"+
+                        "<div class='box khgl' onclick='yqhktx()'><img src='images/yqhkkhtx.png'/><span>预期还款客户提醒</span></div>"+
                     "</div>");
     $(".right").hide();
     $("#mainPage").show();
@@ -37,3 +38,41 @@ $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mykh
     $(".right").hide();
     $("#mainPage").show();
 }
+//预期还款客户提醒
+function yqhktx(){
+    window.scrollTo(0,0);//滚动条回到顶端
+    $("#mainPage").html("<div class='title'><img src='images/back.png' onclick='mykhgl()'/>客户管理-预期还款客户提醒</div>"+  
+                        "<div class='content'>" +
+                            "<table class='cpTable jjTable' style='text-align:center;'>"+
+                                "<tr>"+                                        
+                                    "<th>客户名称</th>"+  
+                                    "<th>证件号码</th>"+
+                                    "<th>产品名称</th>"+
+                                    "<th>贷款金额</th>"+
+                                    "<th>还款日期</th>"+
+                                    "<th>还款金额</th>"+
+                                    "<th>联系方式</th>"+
+                                "</tr>"+
+                                "<tr onclick='check(this)' class='search'>"+  
+                                    "<td>王军忠</td>"+
+                                    "<td>3204566892646902</td>"+
+                                    "<td>集群通</td>"+
+                                    "<td>50000</td>"+
+                                    "<td>2016-03-04</td>"+
+                                    "<td>2000</td>"+
+                                    "<td>133265699113</td>"+
+                                "</tr>"+
+                                "<tr onclick='check(this)' class='search'>"+ 
+                                    "<td>李四</td>"+
+                                    "<td>3204566892646902</td>"+
+                                    "<td>集群通</td>"+
+                                    "<td>50000</td>"+
+                                    "<td>2016-03-05</td>"+
+                                    "<td>2000</td>"+
+                                    "<td>136959989563</td>"+
+                                "</tr>"+
+                            "</table>"+  
+                        "</div>");
+        $(".right").hide();
+        $("#mainPage").show();
+    }

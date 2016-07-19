@@ -4,7 +4,7 @@ function mycpgl(){
 window.scrollTo(0,0);//滚动条回到顶端
 $("#mainPage").html("<div class='title'>" +
     		            "<img src='images/back.png' onclick='mywdsy()'/>产品查询" +
-    		            "<input type='text' style='margin:13px 40px;' placeholder='搜索' onkeyup='search(this)'/>" +
+    		            "<input type='text' style='margin:13px 40px;' placeholder='搜索' onkeyup='search(this,\"cplb\")'/>" +
     		        "</div>"+  
                     "<div class='content' style='padding-bottom:60px;margin-top:160px;'>"+
                         "<div class='cplb' onclick='mycpxx1()'>" +
